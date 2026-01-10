@@ -826,6 +826,7 @@ if (!customElements.get("color-swatch-variant")) {
 /**
  * Scroll Reveal Animation for Section Titles
  * Uses Intersection Observer for performance
+ * Progressive enhancement: animations only activate when JS is ready
  */
 document.addEventListener('DOMContentLoaded', function() {
   // Select all heading elements except those in slideshow
@@ -843,6 +844,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const revealElements = document.querySelectorAll(revealSelectors.join(', '));
 
   if (revealElements.length === 0) return;
+
+  // Add reveal-ready class to body to activate CSS animations
+  document.body.classList.add('reveal-ready');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
