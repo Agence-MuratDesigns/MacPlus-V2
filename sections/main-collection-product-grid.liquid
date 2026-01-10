@@ -498,6 +498,13 @@
     {%- endif -%}
   {%- endif -%}
 
+  {%- comment -%} Inline filter bar for horizontal quick filtering {%- endcomment -%}
+  {%- if section.settings.enable_filtering and section.settings.show_inline_filters -%}
+    <div class="{{ section.settings.container_type }}">
+      {% render 'collection-filter-bar' %}
+    </div>
+  {%- endif -%}
+
   <div
     {% if section.settings.filter_type == 'vertical' or section.settings.filter_type == 'vertical-right' %}
       class="facets-vertical {% if section.settings.filter_type == 'vertical-right' %} facets-vertical-right {% endif %} {{ section.settings.container_type }}"
@@ -703,6 +710,13 @@
       "id": "enable_sorting",
       "default": true,
       "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_inline_filters",
+      "default": true,
+      "label": "Show inline filter bar",
+      "info": "Display a compact horizontal filter bar above products (desktop only)"
     },
     {
         "type": "color",

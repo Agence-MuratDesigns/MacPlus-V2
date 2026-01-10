@@ -98,11 +98,13 @@ a.pagination__item:hover::after {
     font-size: 1.5rem;
     padding-top: 2px!important;
 }
-.pagination__item--current, .pagination__item:hover {
+.pagination__item--current,
+.pagination__item:hover {
     background: rgb(var(--color-foreground)) !important;
+    color: rgb(var(--color-background)) !important;
 }
 .pagination__item--current {
-    cursor: no-drop;
+    cursor: default;
 }
 .pagination-wrapper {
     margin-left: 2px;
