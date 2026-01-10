@@ -3481,8 +3481,15 @@ countdown-timer.product__grid_timer {
 }
 .product__slider--buton:hover {
     transform: translateY(-2px);
-    background: rgba(var(--color-foreground));
-    color: rgb(var(--color-button-text)) !important;
+    background: linear-gradient(135deg, #C8CED4 0%, #8A9199 100%) !important;
+    box-shadow: 0 4px 12px rgba(168, 178, 188, 0.5);
+    color: #1a1a1a !important;
+}
+.product__slider--buton:hover svg {
+    fill: #1a1a1a !important;
+}
+.product__slider--buton:hover::after {
+    color: #1a1a1a !important;
 }
 .section.deals-product-sectoin .section-heading {
     flex-direction: column;

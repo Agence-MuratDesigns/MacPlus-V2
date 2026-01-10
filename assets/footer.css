@@ -121,10 +121,20 @@
 .footer__widget_inner .newsletter-form__field-wrapper input {
     background: var(--gradient-background);
     border: 1px solid rgba(var(--color-foreground),.7);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.footer__widget_inner .newsletter-form__field-wrapper input:focus {
+    border-color: rgba(var(--color-button), 1);
+    box-shadow: 0 0 0 3px rgba(var(--color-button), 0.15);
 }
 .footer__widget_inner .input__field_form_button {
   background: transparent;
   border: none;
+  transition: all 0.3s ease;
+}
+.footer__widget_inner .input__field_form_button:hover {
+  color: rgba(var(--color-button), 1);
+  transform: translateX(3px);
 }
 
 @media only screen and (max-width: 767px) {
@@ -264,6 +274,10 @@ a.dropdown__list__item {
     font-weight: 500;
     text-transform: capitalize;
     font-size: calc(var(--font-heading-size) * 2.0rem);
+    transition: color 0.3s ease;
+}
+.footer__widget:hover .footer__widget_title {
+    color: rgba(var(--color-button), 1);
 }
 .footer-block__details-content.footer-block-image {
     padding-bottom: 10px;
@@ -280,6 +294,15 @@ a.dropdown__list__item {
     height: 38px;
     width: 38px;
     line-height: 38px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.footer__list-social .list-social__link:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 15px rgba(168, 178, 188, 0.4);
+    background: linear-gradient(135deg, #C8CED4 0%, #8A9199 100%) !important;
+}
+.footer__list-social .list-social__link:hover svg {
+    fill: #1a1a1a;
 }
 .footer__list-social a svg {
     height: 12px;
@@ -346,6 +369,11 @@ a.dropdown__list__item {
 }
 .list-payment__item {
     padding: .1rem !important;
+    transition: all 0.3s ease;
+}
+.list-payment__item:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
 }
 
 .nrb_localiza_ftr .localization__store {
@@ -366,6 +394,7 @@ a.dropdown__list__item {
 }
 .footer__widget_inner ul li a {
     position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .footer__widget_inner ul li a:before {
     content: "";
@@ -378,11 +407,16 @@ a.dropdown__list__item {
     width: 7px;
     height: 1px;
     background: rgb(var(--color-foreground));
-    transition: .3s;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.footer__widget_inner ul li a:hover {
+    color: rgba(var(--color-button), 1);
+    transform: translateX(5px);
+}
 .footer__widget_inner ul li a:hover:before {
-    width: 12px;
+    width: 15px;
+    background: rgba(var(--color-button), 1);
 }
 
 

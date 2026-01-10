@@ -8,13 +8,16 @@
     height: 4rem;
     padding: 0;
     box-shadow: 0 1px 2px rgba(var(--color-foreground),.15);
-    transition: var(--transition);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: unset;
     left: unset;
     right: unset;
     margin: 0;
     border: 0;
     border-radius: 5px;
+}
+.product__slider--buton svg {
+    transition: fill 0.35s ease;
 }
 .featured__collection--slider.slider--controls--button {
   display: flex;
@@ -30,7 +33,16 @@
     font-size: 1.5rem;
 }
 .product__slider--buton:hover {
-  color: rgba(var(--color-foreground));
+  background: linear-gradient(135deg, #C8CED4 0%, #8A9199 100%);
+  box-shadow: 0 4px 12px rgba(168, 178, 188, 0.5);
+  transform: translateY(-2px);
+  color: #1a1a1a;
+}
+.product__slider--buton:hover svg {
+  fill: #1a1a1a;
+}
+.product__slider--buton:hover::after {
+  color: #1a1a1a;
 }
 .product_slider_wrapper:hover .product__slider--buton {
   opacity: 1;
