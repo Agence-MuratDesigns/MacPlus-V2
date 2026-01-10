@@ -1,0 +1,151 @@
+{%- comment -%}
+  Renders an emoji flag based on the country ISO code
+
+  Accepts:
+    - country_code: the 2-letter ISO country code (e.g., "FR", "US", "GB")
+    - language_code: optional language code to map to a country flag (e.g., "fr", "en")
+{%- endcomment -%}
+
+{%- liquid
+  if language_code
+    case language_code
+      when 'fr'
+        assign flag_code = 'FR'
+      when 'en'
+        assign flag_code = 'GB'
+      when 'de'
+        assign flag_code = 'DE'
+      when 'es'
+        assign flag_code = 'ES'
+      when 'it'
+        assign flag_code = 'IT'
+      when 'pt'
+        assign flag_code = 'PT'
+      when 'nl'
+        assign flag_code = 'NL'
+      when 'pl'
+        assign flag_code = 'PL'
+      when 'ja'
+        assign flag_code = 'JP'
+      when 'zh'
+        assign flag_code = 'CN'
+      when 'ko'
+        assign flag_code = 'KR'
+      when 'ar'
+        assign flag_code = 'SA'
+      when 'ru'
+        assign flag_code = 'RU'
+      when 'sv'
+        assign flag_code = 'SE'
+      when 'da'
+        assign flag_code = 'DK'
+      when 'no' or when 'nb'
+        assign flag_code = 'NO'
+      when 'fi'
+        assign flag_code = 'FI'
+      when 'cs'
+        assign flag_code = 'CZ'
+      when 'el'
+        assign flag_code = 'GR'
+      when 'tr'
+        assign flag_code = 'TR'
+      when 'he'
+        assign flag_code = 'IL'
+      when 'th'
+        assign flag_code = 'TH'
+      when 'vi'
+        assign flag_code = 'VN'
+      when 'uk'
+        assign flag_code = 'UA'
+      when 'hu'
+        assign flag_code = 'HU'
+      when 'ro'
+        assign flag_code = 'RO'
+      when 'bg'
+        assign flag_code = 'BG'
+      when 'hr'
+        assign flag_code = 'HR'
+      when 'sk'
+        assign flag_code = 'SK'
+      when 'sl'
+        assign flag_code = 'SI'
+      when 'lt'
+        assign flag_code = 'LT'
+      when 'lv'
+        assign flag_code = 'LV'
+      when 'et'
+        assign flag_code = 'EE'
+      when 'id'
+        assign flag_code = 'ID'
+      when 'ms'
+        assign flag_code = 'MY'
+      else
+        assign flag_code = 'GB'
+    endcase
+  else
+    assign flag_code = country_code | upcase
+  endif
+
+  assign first_letter = flag_code | slice: 0
+  assign second_letter = flag_code | slice: 1
+-%}
+
+{%- case first_letter -%}
+  {%- when 'A' -%}{%- assign char1 = '🇦' -%}
+  {%- when 'B' -%}{%- assign char1 = '🇧' -%}
+  {%- when 'C' -%}{%- assign char1 = '🇨' -%}
+  {%- when 'D' -%}{%- assign char1 = '🇩' -%}
+  {%- when 'E' -%}{%- assign char1 = '🇪' -%}
+  {%- when 'F' -%}{%- assign char1 = '🇫' -%}
+  {%- when 'G' -%}{%- assign char1 = '🇬' -%}
+  {%- when 'H' -%}{%- assign char1 = '🇭' -%}
+  {%- when 'I' -%}{%- assign char1 = '🇮' -%}
+  {%- when 'J' -%}{%- assign char1 = '🇯' -%}
+  {%- when 'K' -%}{%- assign char1 = '🇰' -%}
+  {%- when 'L' -%}{%- assign char1 = '🇱' -%}
+  {%- when 'M' -%}{%- assign char1 = '🇲' -%}
+  {%- when 'N' -%}{%- assign char1 = '🇳' -%}
+  {%- when 'O' -%}{%- assign char1 = '🇴' -%}
+  {%- when 'P' -%}{%- assign char1 = '🇵' -%}
+  {%- when 'Q' -%}{%- assign char1 = '🇶' -%}
+  {%- when 'R' -%}{%- assign char1 = '🇷' -%}
+  {%- when 'S' -%}{%- assign char1 = '🇸' -%}
+  {%- when 'T' -%}{%- assign char1 = '🇹' -%}
+  {%- when 'U' -%}{%- assign char1 = '🇺' -%}
+  {%- when 'V' -%}{%- assign char1 = '🇻' -%}
+  {%- when 'W' -%}{%- assign char1 = '🇼' -%}
+  {%- when 'X' -%}{%- assign char1 = '🇽' -%}
+  {%- when 'Y' -%}{%- assign char1 = '🇾' -%}
+  {%- when 'Z' -%}{%- assign char1 = '🇿' -%}
+{%- endcase -%}
+
+{%- case second_letter -%}
+  {%- when 'A' -%}{%- assign char2 = '🇦' -%}
+  {%- when 'B' -%}{%- assign char2 = '🇧' -%}
+  {%- when 'C' -%}{%- assign char2 = '🇨' -%}
+  {%- when 'D' -%}{%- assign char2 = '🇩' -%}
+  {%- when 'E' -%}{%- assign char2 = '🇪' -%}
+  {%- when 'F' -%}{%- assign char2 = '🇫' -%}
+  {%- when 'G' -%}{%- assign char2 = '🇬' -%}
+  {%- when 'H' -%}{%- assign char2 = '🇭' -%}
+  {%- when 'I' -%}{%- assign char2 = '🇮' -%}
+  {%- when 'J' -%}{%- assign char2 = '🇯' -%}
+  {%- when 'K' -%}{%- assign char2 = '🇰' -%}
+  {%- when 'L' -%}{%- assign char2 = '🇱' -%}
+  {%- when 'M' -%}{%- assign char2 = '🇲' -%}
+  {%- when 'N' -%}{%- assign char2 = '🇳' -%}
+  {%- when 'O' -%}{%- assign char2 = '🇴' -%}
+  {%- when 'P' -%}{%- assign char2 = '🇵' -%}
+  {%- when 'Q' -%}{%- assign char2 = '🇶' -%}
+  {%- when 'R' -%}{%- assign char2 = '🇷' -%}
+  {%- when 'S' -%}{%- assign char2 = '🇸' -%}
+  {%- when 'T' -%}{%- assign char2 = '🇹' -%}
+  {%- when 'U' -%}{%- assign char2 = '🇺' -%}
+  {%- when 'V' -%}{%- assign char2 = '🇻' -%}
+  {%- when 'W' -%}{%- assign char2 = '🇼' -%}
+  {%- when 'X' -%}{%- assign char2 = '🇽' -%}
+  {%- when 'Y' -%}{%- assign char2 = '🇾' -%}
+  {%- when 'Z' -%}{%- assign char2 = '🇿' -%}
+{%- endcase -%}
+
+{{- char1 }}{{ char2 -}}

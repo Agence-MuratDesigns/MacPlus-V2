@@ -1,5 +1,5 @@
 {%- comment -%}
-  Renders the country picker for the localization form
+  Renders the country picker for the localization form with flags
 
   Accepts:
     - localPosition: pass in the position in which the form is coming up to create specific IDs
@@ -13,9 +13,8 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span>
-      {{- localization.country.currency.iso_code }} {{ localization.country.currency.symbol }}
-      ({{ localization.country.iso_code }})
+    <span class="localization-flag">
+      {%- render 'country-flag', country_code: localization.country.iso_code -%}
     </span>
     {% render 'icon-caret' %}
   </button>
@@ -32,8 +31,8 @@
             data-value="{{ country.iso_code }}"
           >
             <span class="localization-form__currency">
-              {{- country.currency.iso_code }} {{ country.currency.symbol }}
-              ({{ country.iso_code }})
+              <span class="localization-flag">{%- render 'country-flag', country_code: country.iso_code -%}</span>
+              {{ country.name }}
             </span>
           </a>
         </li>
