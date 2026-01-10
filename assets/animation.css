@@ -87,7 +87,12 @@
 /* Scroll Reveal Animations for Section Titles */
 .section-heading__title,
 .section-heading__sub_title,
-.section-heading {
+.section-heading,
+.reveal-on-scroll,
+section:not(.slideshow) .h0,
+section:not(.slideshow) .h1,
+section:not(.slideshow) h1:not(.slideshow *),
+section:not(.slideshow) h2:not(.slideshow *) {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -96,7 +101,12 @@
 
 .section-heading__title.reveal-visible,
 .section-heading__sub_title.reveal-visible,
-.section-heading.reveal-visible {
+.section-heading.reveal-visible,
+.reveal-on-scroll.reveal-visible,
+.h0.reveal-visible,
+.h1.reveal-visible,
+h1.reveal-visible,
+h2.reveal-visible {
     opacity: 1;
     transform: translateY(0);
 }

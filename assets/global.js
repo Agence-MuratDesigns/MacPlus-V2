@@ -828,16 +828,28 @@ if (!customElements.get("color-swatch-variant")) {
  * Uses Intersection Observer for performance
  */
 document.addEventListener('DOMContentLoaded', function() {
-  const revealElements = document.querySelectorAll('.section-heading, .section-heading__title, .section-heading__sub_title');
+  // Select all heading elements except those in slideshow
+  const revealSelectors = [
+    '.section-heading',
+    '.section-heading__title',
+    '.section-heading__sub_title',
+    '.reveal-on-scroll',
+    'section:not(.slideshow) .h0',
+    'section:not(.slideshow) .h1',
+    'section:not(.slideshow) h1',
+    'section:not(.slideshow) h2'
+  ];
+
+  const revealElements = document.querySelectorAll(revealSelectors.join(', '));
 
   if (revealElements.length === 0) return;
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        // Skip elements inside slideshow
+        if (entry.target.closest('.slideshow, .slideshow__wrapper')) return;
         entry.target.classList.add('reveal-visible');
-        // Optional: unobserve after reveal for performance
-        // revealObserver.unobserve(entry.target);
       }
     });
   }, {
@@ -847,6 +859,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   revealElements.forEach((el) => {
+    // Skip elements inside slideshow
+    if (el.closest('.slideshow, .slideshow__wrapper')) return;
     revealObserver.observe(el);
   });
 });
