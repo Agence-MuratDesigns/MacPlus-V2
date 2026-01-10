@@ -32,7 +32,18 @@
     padding-inline-start: 15px;
   }
   .product__sticky_head {
-    max-width: 300px;
+    max-width: none;
+  }
+  /* Buy Now button in sticky bar - dark style */
+  .product__sticky .shopify-payment-button__button--unbranded {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-shadow: none;
+  }
+  .product__sticky .shopify-payment-button__button--unbranded:hover {
+    background-color: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
   }
   @media only screen and (min-width: 481px) and (max-width: 991px){
     body.sticky__cart {
