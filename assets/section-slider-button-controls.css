@@ -167,7 +167,7 @@ html[dir="rtl"] .product__slider--button > svg {
     height: 4rem;
     padding: 0;
     box-shadow: 0 1px 2px rgba(var(--color-foreground),.15);
-    transition: var(--transition);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: unset;
     left: unset;
     right: unset;
@@ -178,9 +178,15 @@ html[dir="rtl"] .product__slider--button > svg {
 }
 .product__slider--button svg {
     fill: rgb(var(--color-button-text));
+    transition: fill 0.35s ease;
+}
+.product__slider--button:hover {
+    background: linear-gradient(135deg, #C8CED4 0%, #8A9199 100%);
+    box-shadow: 0 4px 12px rgba(168, 178, 188, 0.5);
+    transform: translateY(-2px);
 }
 .product__slider--button:hover svg {
-    fill: rgba(var(--color-foreground));
+    fill: #1a1a1a;
 }
 
 
