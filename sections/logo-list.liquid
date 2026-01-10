@@ -1,0 +1,347 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign column_set = section.settings.column
+  case column_set
+    when '1'
+      assign column_class_standard = 'row-cols-1'
+    when '2'
+      assign column_class_standard = 'row-cols-sm-2 row-cols-md-2 row-cols-lg-2'
+    when '3'
+      assign column_class_standard = 'row-cols-sm-2 row-cols-md-3 row-cols-lg-3'
+    when '4'
+      assign column_class_standard = 'row-cols-sm-3 row-cols-md-4 row-cols-lg-4'
+    when '5'
+      assign column_class_standard = 'row-cols-sm-3 row-cols-md-5 row-cols-lg-5'
+    else
+      assign column_class_standard = 'row-cols-1'
+  endcase
+-%}
+
+<div class="logo-list-wrapper section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="{{ section.settings.container_type }}">
+    {% if section.settings.title != blank or section.settings.subtitle != blank %}
+      <div class="section-heading text-{{ section.settings.alignment }} mb-50">
+        <span class="section-heading__sub_title">{{- section.settings.subtitle -}}</span>
+        <h2 class="section-heading__title {{ section.settings.heading_size }}">{{- section.settings.title -}}</h2>
+      </div>
+    {% endif %}
+    <div class="row row-cols-{{ section.settings.mobile_column }} {{ column_class_standard }}">
+      {%- for block in section.blocks -%}
+        <div
+          class="logo-list__item mb-30 grid__item col"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.logo_image != blank -%}
+            <div
+              class="media media--{{ section.settings.image_ratio }} media--hover-effect overflow-hidden"
+              {% if section.settings.image_ratio == 'adapt' %}
+                style="padding-bottom: {{ 1 | divided_by: block.settings.logo_image.aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              <img
+                srcset="
+                  {%- if block.settings.logo_image.width >= 165 -%}{{ block.settings.logo_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if block.settings.logo_image.width >= 330 -%}{{ block.settings.logo_image | image_url: width: 330 }} 330w,{%- endif -%}
+                  {%- if block.settings.logo_image.width >= 535 -%}{{ block.settings.logo_image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if block.settings.logo_image.width >= 750 -%}{{ block.settings.logo_image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if block.settings.logo_image.width >= 1000 -%}{{ block.settings.logo_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if block.settings.logo_image.width >= 1500 -%}{{ block.settings.logo_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if block.settings.logo_image.width >= 3000 -%}{{ block.settings.logo_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {{ block.settings.logo_image | image_url }} {{ block.settings.logo_image.width }}w
+                "
+                src="{{ block.settings.logo_image | image_url: width: 330 }}"
+                sizes="
+                  (min-width: {{ settings.container_lg_width }}px) {{ settings.container_lg_width | minus: 60 | divided_by: column_set }}px,
+                  (min-width: 750px) {% if column_set > '1' %} calc((100vw - 10rem) / 2) {% else %} calc(100vw - 10rem) {% endif %},
+                  calc(100vw - 3rem)
+                "
+                alt=""
+                height="{{ block.settings.logo_image.height }}"
+                width="{{ block.settings.logo_image.width }}"
+                loading="lazy"
+                class="motion-reduce"
+              >
+            </div>
+
+          {%- else -%}
+            {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+            {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
+            <div
+              class="media media--{{ section.settings.image_ratio }} media--hover-effect overflow-hidden placeholder_svg_parent"
+              {% if section.settings.image_ratio == 'adapt' %}
+                style="padding-bottom: 100%;"
+              {% endif %}
+            >
+              {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo list",
+  "tag": "section",
+  "class": "spaced-section logo-list-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Logo",
+      "label": "t:sections.collection-list.settings.title.label"
+    },
+	{
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Small"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "default": "Our clint description",
+      "label": "Subheading"
+    },
+	{
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Heading alignment"
+    },
+    {
+      "type": "select",
+      "id": "container_type",
+      "options": [
+        {
+          "value": "container",
+          "label": "Default"
+        },
+        {
+          "value": "container-fluid px-0",
+          "label": "Full Width"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container box"
+        }
+      ],
+      "default": "container",
+      "label": "Container type"
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.collection-list.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.collection-list.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.collection-list.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        }
+      ],
+      "default": "square",
+      "label": "t:sections.collection-list.settings.image_ratio.label",
+      "info": "t:sections.collection-list.settings.image_ratio.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+	{
+      "type": "select",
+      "id": "column",
+      "options": [
+		{
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+		{
+          "value": "4",
+          "label": "4"
+        },
+		{
+          "value": "5",
+          "label": "5"
+        }
+      ],
+      "default": "5",
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "mobile_column",
+      "options": [
+		{
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2",
+      "label": "Number of columns on mobile",
+	  "info": "Works on the grid layout"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo list",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

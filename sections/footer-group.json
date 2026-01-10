@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_MDe8pU": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Vector_18.png",
+            "image_width": 200,
+            "contact_address": "<p>MacPlusFrance sélectionne, optimise et reconditionne du matériel informatique et photo avec un niveau d’exigence rare. Chaque appareil est testé, amélioré et préparé pour offrir des performances durables, bien au-delà du standard du marché.</p>",
+            "social_media": false,
+            "social_forground_color": "#022335",
+            "social_background_color": "#ffffff"
+          }
+        },
+        "contact_info_KkTVfr": {
+          "type": "contact_info",
+          "settings": {
+            "heading": "Informations de contact",
+            "contact_address": "<p><strong>Email : </strong>macplusfrance@icloud.com</p><p><strong>Téléphone : </strong>+33 (06)6 22 67 84 25</p><p><strong>Adresse</strong> : 153 Rue Jean Jaurès, Villejuif, France</p>",
+            "social_media": false
+          }
+        },
+        "link_list_gkiy6j": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Menu",
+            "menu": "footer"
+          }
+        },
+        "link_list_HiiBbD": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support / Client",
+            "menu": "customer-account-main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "image_MDe8pU",
+        "contact_info_KkTVfr",
+        "link_list_gkiy6j",
+        "link_list_HiiBbD"
+      ],
+      "settings": {
+        "color_scheme": "scheme-ef8ab2e6-6488-4a4c-a71b-339b3d2ad1c0",
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "show_divider": false,
+        "show_divider_home": false,
+        "copy_right_color_scheme": "accent-1",
+        "copyright_custom_enable": true,
+        "copyright_custom_text": "<p><strong>♡</strong> Designed By <a href=\"https://themeforest.net/user/team90degree\" target=\"_blank\" title=\"https://themeforest.net/user/team90degree\">Team90degree</a></p>",
+        "payment_enable": true,
+        "content_alignment": "left",
+        "padding_top": 105,
+        "padding_bottom": 95,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 45
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

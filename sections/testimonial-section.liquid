@@ -1,0 +1,708 @@
+{{ 'testimonial-section.css' | asset_url | stylesheet_tag }}
+{{ 'section-slider-button-controls.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+    .rating {
+       display: inline-block;
+       margin: 0;
+     }
+     .testimonial__card--review {
+       margin-bottom: 15px;
+     }
+    .testimonial__card--review .rating-star {
+      --letter-spacing: .3;
+      --font-size: 2.2;
+    }
+
+    .rating-star {
+     --percent: calc(
+       (
+           var(--rating) / var(--rating-max) + var(--rating-decimal) *
+             var(--font-size) /
+             (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))
+         ) * 100%
+     );
+     letter-spacing: calc(var(--letter-spacing) * 1rem);
+     font-size: calc(var(--font-size) * 1rem);
+     line-height: 1;
+     display: inline-block;
+     font-family: Times;
+     margin: 0;
+   }
+
+   .rating-star::before {
+     content: '★★★★★';
+     background: linear-gradient(
+       90deg,
+       var(--color-icon) var(--percent),
+       rgba(var(--color-foreground), 0.15) var(--percent)
+     );
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+   }
+
+  .rating {
+     display: inline-block;
+     margin: 0;
+   }
+
+   .rating-text {
+     display: none;
+   }
+
+   .rating-count {
+     display: inline-block;
+     margin: 0;
+   }
+
+   @media (forced-colors: active) {
+     .rating {
+       display: none;
+     }
+
+     .rating-text {
+       display: block;
+     }
+   }
+   {%- if section.settings.image != blank -%}
+    .section-{{ section.id }}-padding {
+      margin-top: {{ section.settings.mobile_padding_top }}px;
+      margin-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+    @media screen and (min-width: 991px) {
+      .section-{{ section.id }}-padding {
+        margin-top: {{ section.settings.padding_top }}px;
+        margin-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+   {%- else -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.mobile_padding_top }}px;
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+    @media screen and (min-width: 991px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+    {%- endif -%}
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.mobile_padding_top }}px;
+        padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+      }
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+    #section__{{ section.id }}.collection__list--slider.slider--controls--button{
+       --slider-button-background: {{ section.settings.button_background }};
+       --slider-button-color: {{ section.settings.button_text_color }};
+    }
+{%- endstyle -%}
+
+{%- liquid
+  if section.settings.collection.all_products_count > section.settings.products_to_show
+    assign more_in_collection = true
+  endif
+  if section.settings.layout == 'masonry'
+    assign columns = section.blocks.size
+    if columns > 3
+      assign columns = 3
+    endif
+  else
+    assign columns = section.settings.column
+  endif
+
+  if section.settings.layout == 'grid'
+    assign column_set = section.settings.column
+    case column_set
+      when '1'
+        assign column_class_standard = 'col-12'
+      when '2'
+        assign column_class_standard = 'col-md-6 col-sm-6 col-12'
+      when '3'
+        assign column_class_standard = 'col-md-4 col-sm-6 col-12'
+      when '4'
+        assign column_class_standard = 'col-md-3 col-sm-6 col-12'
+      else
+        assign column_class_standard = 'col'
+    endcase
+  endif
+
+  if section.settings.layout == 'slider'
+    assign slider_enable = true
+  endif
+
+  if slider_enable
+    assign showPagination = section.settings.show_pagination
+    assign showNavigation = section.settings.show_navigation
+
+    assign productShowXl = section.settings.column
+    assign productShowSm = section.settings.products_show_on_sm
+    assign slideAutoplay = section.settings.auto_rotate
+    assign autoplay_time = section.settings.autoplay_time
+
+    assign max_proudct_show_first_view = section.settings.column | plus: 0
+  endif
+-%}
+
+{%- capture slider_wrapper -%}
+  {%- if slider_enable -%}
+    productSlider swiper
+  {%- else -%}
+    row {% if section.settings.column == "5" %} row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 {% endif %}
+  {%- endif -%}
+{%- endcapture -%}
+
+<div
+  class="testimonial-wrapper section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+  data-section-id="{{ section.id }}"
+  data-section-type="product-slider"
+  data-slider-enable="{{ slider_enable }}"
+  {% if slider_enable %}
+    data-show-mobile="{{ productShowSm }}"
+    data-show-extra-large="{{ productShowXl }}"
+    data-autoplay="{{ slideAutoplay }}"
+    data-autoplay-time="{{ autoplay_time }}000"
+    data-slider-loop="{%- if section.blocks.size > max_proudct_show_first_view -%}true {%- else -%} false {%- endif -%}"
+  {% endif %}
+>
+  {%- if section.settings.image != blank -%}
+    <div class="media newsletter__media--wrapper">
+      <img
+        srcset="
+          {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+        "
+        src="{{ section.settings.image | image_url: width: 1920 }}"
+        sizes="100vw"
+        alt="{{  section.settings.image.alt | escape }}"
+        loading="lazy"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+    </div>
+  {%- endif -%}
+
+  <div class="{{ section.settings.container_type }}">
+    {%- if slider_enable -%}
+      <div class="slider__heading--wrapper">
+    {% endif %}
+    {% if section.settings.title != blank or section.settings.subtitle != blank %}
+      {%- if slider_enable
+        or section.settings.show_view_all
+        and more_in_collection
+        and section.settings.button_label != blank
+      -%}
+        <div class="section-heading-wrapper {% if section.settings.show_navigation != false %}  d-flex {% endif %} {% if slider_enable != false %} mb-50{% endif %}">
+      {% endif %}
+      <div class="section-heading text-{{ section.settings.alignment }} {% if section.settings.layout == 'grid' %}mb-50{% endif %}">
+        <span class="section-heading__sub_title">{{- section.settings.subtitle -}}</span>
+        <h2 class="section-heading__title {{ section.settings.heading_size }}">{{- section.settings.title -}}</h2>
+      </div>
+
+      {%- if slider_enable
+        or section.settings.show_view_all
+        and more_in_collection
+        and section.settings.button_label != blank
+      -%}
+          {%- if showNavigation -%}
+        <div class="header-right-side-action-wrap">
+          {%- if slider_enable -%}
+            <div class="testimonial__collection--slider slider--controls--button mt-30">
+              {%- if showNavigation -%}
+                <div class="swiper-button-prev testimonial__slider--buton"></div>
+              {%- endif -%}
+              {%- if showPagination -%}
+                <div class="swiper-pagination pagination--dots testimonial__slider--pagination"></div>
+              {%- endif -%}
+              {%- if showNavigation -%}
+                <div class="swiper-button-next testimonial__slider--buton"></div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+        {% endif %}
+      {% endif %}
+      {%- if slider_enable
+        or section.settings.show_view_all
+        and more_in_collection
+        and section.settings.button_label != blank
+      -%}
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {%- if slider_enable -%}
+      </div>
+    {% endif %}
+
+    <div class="collection-list {{ slider_wrapper }}">
+      {%- if slider_enable -%}<div class="swiper-wrapper">{% endif %}
+      {%- for block in section.blocks -%}
+        {%- liquid
+          if section.settings.layout == 'masonry'
+            if forloop.index > 2
+              assign column_class = 'col-md-4 col-sm-6 col-12'
+            else
+              assign column_class = 'col-md-6 col-sm-6 col-12'
+            endif
+          endif
+        -%}
+        <div
+          class="testimonial-list--item grid__item {% if slider_enable %} swiper-slide {% else %} {{ column_set }} {{ column_class }} {{ column_class_standard }} mb-30{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="testimonial-item single-testimonial-single-item ">
+            <div class="single-testimonial-single-item__content">
+
+ <div class="testimonial__card--review">
+      <div class="client-info-wrap">
+                {%- if block.settings.avator_image != blank -%}
+                  <div class="client-avator">
+                    <div class="media client-avator__media">
+                      <img
+                        srcset="
+                          {%- if block.settings.avator_image.width >= 46 -%}{{ block.settings.avator_image | image_url: width: 46 }} 46w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 100 -%}{{ block.settings.avator_image | image_url: width: 100 }} 100w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 120 -%}{{ block.settings.avator_image | image_url: width: 120 }} 120w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 375 -%}{{ block.settings.avator_image | image_url: width: 375 }} 375w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 750 -%}{{ block.settings.avator_image | image_url: width: 750 }} 750w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 1100 -%}{{ block.settings.avator_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 1500 -%}{{ block.settings.avator_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 1780 -%}{{ block.settings.avator_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 2000 -%}{{ block.settings.avator_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 3000 -%}{{ block.settings.avator_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                          {%- if block.settings.avator_image.width >= 3840 -%}{{ block.settings.avator_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                        "
+                        src="{{ block.settings.avator_image | image_url: width: 375 }}"
+                        sizes="375px"
+                        alt="{{  section.settings.image.alt | escape }}"
+                        loading="lazy"
+                        width="120"
+                        height="120"
+                      >
+                    </div>
+                  </div>
+                {%- endif -%}
+                <div class="client-info">
+                  {% if block.settings.client_name != blank %}
+                    <p class="name h6">{{ block.settings.client_name }}</p>
+                  {% endif %}
+                  {% if block.settings.client_designation != blank %}
+                    <span class="designation">{{ block.settings.client_designation }}</span>
+                  {% endif %}
+                </div>
+              </div>
+
+ </div>
+
+              {% if block.settings.testimonial_review_title != blank %}
+                <div class="text h3">{{ block.settings.testimonial_review_title }}</div>
+              {% endif %}
+              {% if block.settings.client_review_text != blank %}
+                <p class="text">{{ block.settings.client_review_text }}</p>
+              {% endif %}
+
+
+
+
+              <div class="testimonial__card--review">
+                <div class="rating" role="img" aria-label="5.0 out of 5.0 stars">
+                  <span
+                    aria-hidden="true"
+                    class="rating-star"
+                    style="--rating: {{ block.settings.client_review_icon }}; --rating-max: 5.0; --rating-decimal: 0; --color-icon: {{ section.settings.review_star_color }};"
+                  ></span>
+                </div>
+              </div>
+
+
+
+
+
+
+
+              
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+      {%- if slider_enable -%}
+        </div>
+      {%- endif -%}
+
+      {%- if slider_enable
+        and section.settings.show_navigation
+        and section.settings.title == blank
+        and section.settings.subtitle == blank
+      -%}
+        <div class="testimonial__collection--slider slider--controls--button mt-30">
+          {%- if showNavigation -%}
+            <div class="swiper-button-prev testimonial__slider--buton"></div>
+          {%- endif -%}
+          {%- if showPagination -%}
+            <div class="swiper-pagination pagination--dots testimonial__slider--pagination"></div>
+          {%- endif -%}
+          {%- if showNavigation -%}
+            <div class="swiper-button-next testimonial__slider--buton"></div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonial Section",
+  "tag": "section",
+  "class": "spaced-section Instagram-section",
+  "max_blocks": 15,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Testimonial",
+      "label": "t:sections.collection-list.settings.title.label"
+    },
+	{
+    "type": "select",
+    "id": "heading_size",
+    "options": [
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Small"
+        }
+     ],
+     "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "default": "Sub Title",
+      "label": "Subheading"
+    },
+	{
+      "type": "select",
+      "id": "alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Heading alignment"
+    },
+    {
+      "type": "select",
+      "id": "container_type",
+      "options": [
+        {
+          "value": "container",
+          "label": "Default"
+        },
+        {
+          "value": "container-fluid px-0",
+          "label": "Full Width"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container box"
+        }
+      ],
+      "default": "container",
+      "label": "Container type"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "slider",
+          "label": "Slider"
+        },
+        {
+          "value": "grid",
+          "label": "Grid"
+        }
+      ],
+      "default": "slider",
+      "label": "Layout"
+    },
+	{
+      "type": "select",
+      "id": "column",
+      "options": [
+		{
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "3",
+      "label": "Number of columns on desktop",
+	  "info": "Works on the grid layout"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+	{
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "Auto-rotate slides",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_time",
+      "min": 2,
+      "max": 9,
+      "step": 1,
+      "unit": "s",
+      "label": "Change slides every",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "label": "Show navigation",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "select",
+      "id": "products_show_on_sm",
+      "label": "Number of columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Section Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "review_star_color",
+      "label": "Review star color",
+      "default": "#ffce31"
+    },
+	{
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial_item",
+      "name": "Testimonial item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "client_review_icon",
+          "label": "Review",
+          "options": [
+            {
+              "value": "1",
+              "label": "1 start"
+            },
+            {
+              "value": "2",
+              "label": "2 start"
+            },
+            {
+              "value": "3",
+              "label": "3 start"
+            },
+            {
+              "value": "4",
+              "label": "4 start"
+            },
+            {
+              "value": "5",
+              "label": "5 start"
+            }
+          ],
+          "default": "5"
+        },
+        {
+          "type": "text",
+          "id": "testimonial_review_title",
+          "default": "Smart Home Assistant",
+          "label": "Title"
+       },
+       {
+          "type": "textarea",
+          "id": "client_review_text",
+          "default": "“This smart home assistant has become very important part of my daily routine. From managing my schedule and setting reminders to controlling smart home devices and answering questions.”",
+          "label": "Client review text"
+       },
+        {
+          "type": "image_picker",
+          "id": "avator_image",
+          "label": "Author image"
+        },
+       {
+          "type": "textarea",
+          "id": "client_name",
+          "default": "Willie Bradley",
+          "label": "Client name"
+       },
+       {
+          "type": "textarea",
+          "id": "client_designation",
+          "default": "/ Reporter",
+          "label": "Client designation"
+       }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Section",
+      "blocks": [
+        {
+          "type": "testimonial_item"
+        },
+        {
+          "type": "testimonial_item"
+        },
+        {
+          "type": "testimonial_item"
+        },
+		{
+          "type": "testimonial_item"
+        },
+		{
+          "type": "testimonial_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

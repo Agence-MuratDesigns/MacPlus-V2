@@ -1,0 +1,40 @@
+# Shopify Theme - .gitignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Node modules (if using build tools)
+node_modules/
+
+# Build artifacts
+dist/
+.cache/
+
+# Shopify CLI
+.shopify/
+
+# ZIP files
+*.zip
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
