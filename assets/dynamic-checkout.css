@@ -26,20 +26,22 @@
 }
 
 .shopify-payment-button__button--unbranded {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
-  color: rgb(var(--color-button-text));
+  background-color: #1a1a1a;
+  box-shadow: none;
+  color: #ffffff;
   font-size: calc(var(--button-font-size) * 1.6rem);
   line-height: 1;
   letter-spacing: var(--button-letter-spacing);
   border-radius: var(--button-border-radius);
   text-transform: var(--button-text-case);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .shopify-payment-button__button--unbranded:hover,
 .shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-button), var(--alpha-button-border));
+  background-color: #333333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
 }
 
 .shopify-payment-button__more-options {

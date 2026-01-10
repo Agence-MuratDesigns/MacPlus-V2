@@ -82,7 +82,7 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.5);
+  color: #dc3545;
   margin-inline-start: 10px;
 }
 
