@@ -275,9 +275,10 @@ a.dropdown__list__item {
     text-transform: capitalize;
     font-size: calc(var(--font-heading-size) * 2.0rem);
     transition: color 0.3s ease;
+    color: #A8B2BC;
 }
 .footer__widget:hover .footer__widget_title {
-    color: rgba(var(--color-button), 1);
+    color: #8A9199;
 }
 .footer-block__details-content.footer-block-image {
     padding-bottom: 10px;
@@ -411,12 +412,12 @@ a.dropdown__list__item {
 }
 
 .footer__widget_inner ul li a:hover {
-    color: rgba(var(--color-button), 1);
+    color: #A8B2BC;
     transform: translateX(5px);
 }
 .footer__widget_inner ul li a:hover:before {
     width: 15px;
-    background: rgba(var(--color-button), 1);
+    background: #A8B2BC;
 }
 
 

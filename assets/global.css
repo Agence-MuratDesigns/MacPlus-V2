@@ -3479,6 +3479,12 @@ countdown-timer.product__grid_timer {
 .product__slider--buton {
     border-radius: 50px !important;
 }
+.product__slider--buton svg {
+    fill: #ffffff !important;
+}
+.product__slider--buton::after {
+    color: #ffffff !important;
+}
 .product__slider--buton:hover {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #C8CED4 0%, #8A9199 100%) !important;

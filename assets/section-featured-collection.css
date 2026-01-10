@@ -18,6 +18,10 @@
 }
 .product__slider--buton svg {
     transition: fill 0.35s ease;
+    fill: #ffffff;
+}
+.product__slider--buton::after {
+    color: #ffffff;
 }
 .featured__collection--slider.slider--controls--button {
   display: flex;
