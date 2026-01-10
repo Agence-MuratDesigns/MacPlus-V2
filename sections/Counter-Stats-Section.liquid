@@ -1,0 +1,222 @@
+{% schema %}
+{
+  "name": "Counter nubmer section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "options": [
+        {
+          "value": "container",
+          "label": "Default"
+        },
+        {
+          "value": "container-fluid px-0",
+          "label": "Full Width"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Container box"
+        }
+      ],
+      "default": "container",
+      "label": "Container type"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_counter",
+      "label": "Enable Counter Animation",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 70
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "counter_item",
+      "name": "Counter item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "customers_count",
+          "label": "Count number",
+          "default": "1000000"
+        },
+        {
+          "type": "text",
+          "id": "customers_label",
+          "label": "Count Label",
+          "default": "PARTS SOLD"
+        },
+        {
+          "type": "paragraph",
+          "content": "🛈 It will work after save"
+        },
+      ]
+    }
+
+    
+  ],
+  "presets": [
+    {
+      "name": "Counter nubmer section",
+      "blocks": [
+        {
+          "type": "counter_item"
+        },
+        {
+          "type": "counter_item"
+        },
+        {
+          "type": "counter_item"
+        },
+        {
+          "type": "counter_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<style>
+
+
+  
+.counter-stats {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.counter-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.counter-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-stats__number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: rgba(var(--color-foreground), 1);
+}
+
+.counter-stats__label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(var(--color-foreground), 1);
+    margin-top: -8px;
+}
+
+@media screen and (max-width: 768px) {
+  .counter-stats__number {
+    font-size: 2.5rem;
+  }
+}
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+
+    
+  }
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .counter-stats__grid {
+      gap: 30px;
+    }
+  
+}
+  
+</style>
+
+<section class="counter-stats section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient" data-section-type="ctrnmbr" data-enable-counter="{{ section.settings.enable_counter }}">
+    <div class="{{ section.settings.container_type }}">
+      <div class="counter-stats__grid">
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+        {%- when 'counter_item' -%}
+          <div class="counter-stats__item">
+           <div class="counter-stats__number" data-counter="{{ block.settings.customers_count }}">0</div>
+           <div class="counter-stats__label">{{ block.settings.customers_label }}</div>
+          </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+</section>
