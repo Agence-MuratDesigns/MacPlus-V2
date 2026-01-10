@@ -1,5 +1,5 @@
 <style>
-  
+
   button.dropdown__open_label {
     background: none;
     border: none;
@@ -38,7 +38,21 @@
     color: rgba(var(--color-foreground), 1);
 }
 
-  
+  /* Flag styles for localization */
+  .topbar-flag {
+    font-size: 1.3em;
+    line-height: 1;
+  }
+  .dropdown__open_label .topbar-flag {
+    margin-right: 4px;
+  }
+  .dropdown__list__item .topbar-flag {
+    margin-right: 8px;
+  }
+  .localization-form {
+    margin-right: 15px;
+  }
+
 </style>
 
 
@@ -52,14 +66,16 @@
           <div class="no-js-hidden">
             <div class="disclosure">
               <button type="button" class="dropdown__open_label" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
-                 {{ localization.country.name }} {{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }}
+                <span class="topbar-flag">{%- render 'country-flag', country_code: localization.country.iso_code -%}</span>
+                {{ localization.country.currency.iso_code }}
                 {% render 'icon-caret' %}
               </button>
               <ul id="FooterCountryList" role="list" class="dropdown__open_list list-unstyled" hidden>
                 {%- for country in localization.available_countries -%}
                 <li class="disclosure__item" tabindex="-1">
-                  <a class="dropdown__list__item {% if country.iso_code == localization.country.iso_code %}active{% endif %} " href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                   {{ country.name }}  <span class="localization-form__currency">{{ country.currency.iso_code }} {{ country.currency.symbol }}</span>
+                  <a class="dropdown__list__item {% if country.iso_code == localization.country.iso_code %}active{% endif %}" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+                    <span class="topbar-flag">{%- render 'country-flag', country_code: country.iso_code -%}</span>
+                    {{ country.name }}
                   </a>
                 </li>
                 {%- endfor -%}
@@ -73,17 +89,19 @@
 
         {%- if localization.available_languages.size > 1 -%}
         <localization-form>
-          {%- form 'localization', id: 'FooterLanguageForm' -%}
+          {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
           <div class="no-js-hidden">
             <div class="disclosure">
               <button type="button" class="dropdown__open_label" aria-expanded="false" aria-controls="FooterLanguageList" aria-describedby="FooterLanguageLabel">
-                {{ localization.language.endonym_name | capitalize }}
+                <span class="topbar-flag">{%- render 'language-flag', language_code: localization.language.iso_code -%}</span>
+                {{ localization.language.iso_code | upcase }}
                 {% render 'icon-caret' %}
               </button>
               <ul id="FooterLanguageList" role="list" class="dropdown__open_list list-unstyled" hidden>
                 {%- for language in localization.available_languages -%}
                 <li class="disclosure__item" tabindex="-1">
-                  <a class="dropdown__list__item {% if language.iso_code == localization.language.iso_code %} active{% endif %} f" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
+                  <a class="dropdown__list__item {% if language.iso_code == localization.language.iso_code %} active{% endif %}" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
+                    <span class="topbar-flag">{%- render 'language-flag', language_code: language.iso_code -%}</span>
                     {{ language.endonym_name | capitalize }}
                   </a>
                 </li>

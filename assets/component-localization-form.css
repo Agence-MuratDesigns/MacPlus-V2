@@ -334,3 +334,19 @@ noscript .localization-selector.link {
   left: 0.4rem;
   right: auto;
 }
+
+/* Flag styles for localization */
+.localization-flag {
+  font-size: 1.4em;
+  line-height: 1;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.disclosure__link .localization-flag {
+  margin-right: 0.8rem;
+}
+
+.disclosure__button .localization-flag {
+  margin-right: 0.4rem;
+}

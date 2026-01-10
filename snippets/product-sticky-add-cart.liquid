@@ -85,18 +85,13 @@
       min-width: 180px;
     }
   }
-  @media only screen and (max-width: 480px){
+  /* Hide sticky bar on mobile - too cramped */
+  @media only screen and (max-width: 767px){
     .product__sticky {
-      flex-direction: column;
-    }
-    sticky-variant-select {
-      margin-bottom: 10px;
-    }
-    .sticky-variant-select .select_box {
-      min-width: 248px;
+      display: none !important;
     }
     body.sticky__cart {
-      padding-bottom: 133px;
+      padding-bottom: 0 !important;
     }
   }
   .product__sticky.d-flex.sticky__box_width {

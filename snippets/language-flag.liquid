@@ -1,0 +1,54 @@
+{%- comment -%}
+  Renders a flag emoji based on language ISO code
+
+  Accepts:
+    - language_code: 2-letter ISO language code (e.g., 'fr', 'en', 'de')
+
+  Usage: {% render 'language-flag', language_code: 'fr' %}
+{%- endcomment -%}
+
+{%- case language_code -%}
+  {%- when 'ar' -%}🇸🇦
+  {%- when 'bg' -%}🇧🇬
+  {%- when 'ca' -%}🇪🇸
+  {%- when 'cs' -%}🇨🇿
+  {%- when 'da' -%}🇩🇰
+  {%- when 'de' -%}🇩🇪
+  {%- when 'el' -%}🇬🇷
+  {%- when 'en' -%}🇬🇧
+  {%- when 'es' -%}🇪🇸
+  {%- when 'et' -%}🇪🇪
+  {%- when 'fi' -%}🇫🇮
+  {%- when 'fr' -%}🇫🇷
+  {%- when 'he' -%}🇮🇱
+  {%- when 'hi' -%}🇮🇳
+  {%- when 'hr' -%}🇭🇷
+  {%- when 'hu' -%}🇭🇺
+  {%- when 'id' -%}🇮🇩
+  {%- when 'it' -%}🇮🇹
+  {%- when 'ja' -%}🇯🇵
+  {%- when 'ko' -%}🇰🇷
+  {%- when 'lt' -%}🇱🇹
+  {%- when 'lv' -%}🇱🇻
+  {%- when 'ms' -%}🇲🇾
+  {%- when 'nb' -%}🇳🇴
+  {%- when 'nl' -%}🇳🇱
+  {%- when 'no' -%}🇳🇴
+  {%- when 'pl' -%}🇵🇱
+  {%- when 'pt' -%}🇵🇹
+  {%- when 'pt-BR' -%}🇧🇷
+  {%- when 'ro' -%}🇷🇴
+  {%- when 'ru' -%}🇷🇺
+  {%- when 'sk' -%}🇸🇰
+  {%- when 'sl' -%}🇸🇮
+  {%- when 'sr' -%}🇷🇸
+  {%- when 'sv' -%}🇸🇪
+  {%- when 'th' -%}🇹🇭
+  {%- when 'tr' -%}🇹🇷
+  {%- when 'uk' -%}🇺🇦
+  {%- when 'vi' -%}🇻🇳
+  {%- when 'zh-CN' -%}🇨🇳
+  {%- when 'zh-TW' -%}🇹🇼
+  {%- when 'zh' -%}🇨🇳
+  {%- else -%}🌐
+{%- endcase -%}
