@@ -10,12 +10,12 @@
 {
   "general": {
     "password_page": {
-      "login_form_heading": "Entrer dans la boutique avec un mot de passe :",
-      "login_password_button": "Accéder avec un mot de passe",
-      "login_form_password_label": "Mot de passe",
-      "login_form_password_placeholder": "Votre mot de passe",
-      "login_form_error": "Mot de passe incorrect !",
-      "login_form_submit": "Entrer",
+      "login_form_heading": "",
+      "login_password_button": "",
+      "login_form_password_label": "",
+      "login_form_password_placeholder": "",
+      "login_form_error": "",
+      "login_form_submit": "",
       "modal": "Fenêtre de mot de passe",
       "admin_link_html": "Êtes-vous le propriétaire de la boutique ? <a href=\"/admin\" class=\"link underlined-link\">Connectez-vous ici</a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
@@ -76,26 +76,26 @@
     },
     "add_cart_note": {
       "button_title": "Note",
-      "popup_title": "Ajouter une note pour le vendeur",
-      "save_button": "Enregistrer",
-      "cancel_title": "Annuler"
+      "popup_title": "",
+      "save_button": "",
+      "cancel_title": ""
     },
     "share": {
-      "close": "Fermer le partage",
-      "copy_to_clipboard": "Copier le lien",
-      "share_url": "Lien",
-      "success_message": "Lien copié dans le presse-papiers",
-      "facebook": "Facebook",
-      "twitter": "Twitter",
-      "pinterest": "Pin it",
-      "facebook_follow": "Suivez-nous sur Facebook",
-      "twitter_follow": "Suivez-nous sur Twitter",
-      "pinterest_follow": "Suivez-nous sur Pinterest"
+      "close": "",
+      "copy_to_clipboard": "",
+      "share_url": "",
+      "success_message": "",
+      "facebook": "",
+      "twitter": "",
+      "pinterest": "",
+      "facebook_follow": "",
+      "twitter_follow": "",
+      "pinterest_follow": ""
     },
     "slider": {
-      "of": "sur",
-      "next_slide": "Faire défiler vers la droite",
-      "previous_slide": "Faire défiler vers la gauche"
+      "of": "",
+      "next_slide": "",
+      "previous_slide": ""
     }
   },
   "date_formats": {
