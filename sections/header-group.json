@@ -35,8 +35,8 @@
         "icon_2": "email",
         "header_linklist_title_2": "macplusfrance@icloud.com",
         "header_linklist_url_2": "",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "section_padding_top": 20,
         "section_padding_bottom": 20
       }
