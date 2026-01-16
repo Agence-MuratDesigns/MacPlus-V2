@@ -16,48 +16,48 @@
       "login_form_password_placeholder": "",
       "login_form_error": "",
       "login_form_submit": "",
-      "modal": "Fenêtre de mot de passe",
-      "admin_link_html": "Êtes-vous le propriétaire de la boutique ? <a href=\"/admin\" class=\"link underlined-link\">Connectez-vous ici</a>",
-      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+      "modal": "",
+      "admin_link_html": "",
+      "powered_by_shopify_html": ""
     },
     "social": {
       "alt_text": {
-        "share_on_facebook": "Partager sur Facebook",
-        "share_on_twitter": "Partager sur Twitter",
-        "share_on_pinterest": "Partager sur Pinterest"
+        "share_on_facebook": "",
+        "share_on_twitter": "",
+        "share_on_pinterest": ""
       },
       "links": {
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "pinterest": "Pinterest",
-        "instagram": "Instagram",
-        "tumblr": "Tumblr",
-        "snapchat": "Snapchat",
-        "youtube": "YouTube",
-        "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "twitter": "",
+        "facebook": "",
+        "pinterest": "",
+        "instagram": "",
+        "tumblr": "",
+        "snapchat": "",
+        "youtube": "",
+        "vimeo": "",
+        "tiktok": ""
       }
     },
-    "continue_shopping": "Continuer mes achats",
-    "back_to_home_label": "Accueil",
+    "continue_shopping": "",
+    "back_to_home_label": "",
     "pagination": {
-      "label": "Pagination",
-      "page": "Page {{ number }}",
-      "next": "Page suivante",
-      "previous": "Page précédente"
+      "label": "",
+      "page": "",
+      "next": "",
+      "previous": ""
     },
     "search": {
-      "search": "Rechercher dans la boutique",
-      "no_results_html": "Votre recherche pour “{{ terms }}” n’a donné aucun résultat.",
-      "results_for_html": "Votre recherche pour “{{ terms }}” a donné les résultats suivants :",
-      "title": "Rechercher des produits sur notre site",
-      "placeholder": "Rechercher dans la boutique",
-      "submit": "Rechercher"
+      "search": "",
+      "no_results_html": "",
+      "results_for_html": "",
+      "title": "",
+      "placeholder": "",
+      "submit": ""
     },
     "advance_search": {
-      "field_label_1": "Sélection 1",
-      "field_label_2": "Sélection 2",
-      "field_label_3": "Sélection 3",
+      "field_label_1": "",
+      "field_label_2": "",
+      "field_label_3": "",
       "field_label_4": ""
     },
     "cart": {
