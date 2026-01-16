@@ -58,24 +58,24 @@
       "field_label_1": "Sélection 1",
       "field_label_2": "Sélection 2",
       "field_label_3": "Sélection 3",
-      "field_label_4": "Sélection 4"
+      "field_label_4": ""
     },
     "cart": {
-      "view": "Voir le panier",
-      "item_added": "Article ajouté à votre panier"
+      "view": "",
+      "item_added": ""
     },
     "shipping_calculator": {
-      "button_title": "Livraison",
-      "popup_title": "Estimer les frais de livraison",
-      "calculate_button": "Calculer",
-      "cancel_button": "Annuler",
-      "address_first_label": "Nous avons trouvé",
-      "address_second_label": "frais de livraison pour votre adresse",
-      "country_label": "Veuillez sélectionner un pays",
-      "wrong_message": "Veuillez mettre les bonnes informations"
+      "button_title": "",
+      "popup_title": "",
+      "calculate_button": "",
+      "cancel_button": "",
+      "address_first_label": "",
+      "address_second_label": "",
+      "country_label": "",
+      "wrong_message": ""
     },
     "add_cart_note": {
-      "button_title": "Note",
+      "button_title": "",
       "popup_title": "",
       "save_button": "",
       "cancel_title": ""
