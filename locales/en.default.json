@@ -301,99 +301,99 @@
   },
   "sections": {
     "header": {
-      "announcement": "Announcement",
+      "announcement": "Annonce",
       "menu": "Menu",
       "cart_count": {
-        "one": "{{ count }} item",
-        "other": "{{ count }} items"
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles"
       }
     },
     "slideshow": {
-      "load_slide": "Load slide",
-      "previous_slideshow": "Previous slide",
-      "next_slideshow": "Next slide",
-      "pause_slideshow": "Pause slideshow",
-      "play_slideshow": "Play slideshow",
-      "carousel": "Carousel",
+      "load_slide": "Charger la diapositive",
+      "previous_slideshow": "Diapositive précédente",
+      "next_slideshow": "Diapositive suivante",
+      "pause_slideshow": "Mettre le diaporama en pause",
+      "play_slideshow": "Lancer le diaporama",
+      "carousel": "Carrousel",
       "slide": "Slide"
     },
     "cart": {
-      "title": "Your cart",
-      "caption": "Cart items",
-      "remove_title": "Remove {{ title }}",
-      "remove": "Remove",
-      "subtotal": "Subtotal",
-      "new_subtotal": "New subtotal",
-      "note": "Order special instructions",
-      "checkout": "Check out",
-      "empty": "Your cart is empty",
-      "cart_error": "There was an error while updating your cart. Please try again.",
-      "cart_quantity_error_html": "You can only add [quantity] of this item to your cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
-      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
-      "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
+      "title": "Votre panier",
+      "caption": "Articles du panier",
+      "remove_title": "Supprimer {{ title }}",
+      "remove": "Supprimer",
+      "subtotal": "Sous-total",
+      "new_subtotal": "Nouveau Sous-total",
+      "note": "Instructions spéciales pour la commande",
+      "checkout": "Passer à la caisse",
+      "empty": "Votre panier est vide",
+      "cart_error": "Une erreur est survenue lors de la mise à jour de votre panier. Veuillez réessayer.",
+      "cart_quantity_error_html": "Vous pouvez uniquement ajouter [quantity] exemplaires de cet article à votre panier.",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes et livraison calculées à la validation de la commande",
+      "taxes_included_but_shipping_at_checkout": "Taxes incluses, livraison calculée à la validation",
+      "taxes_included_and_shipping_policy_html": "Taxes incluses. Livraison calculée à la validation de la commande.",
+      "taxes_and_shipping_at_checkout": "Taxes et livraison calculées à la validation de la commande",
       "headings": {
-        "product": "Product",
-        "price": "Price",
+        "product": "Produit",
+        "price": "Prix",
         "total": "Total",
-        "quantity": "Quantity"
+        "quantity": "Quantité"
       },
-      "update": "Update",
+      "update": "Mettre à jour",
       "login": {
-        "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+        "title": "Vous avez déjà un compte ?",
+        "paragraph_html": "Connectez-vous pour passer commande plus rapidement."
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Paiement / Moyens de paiement"
     },
     "featured_blog": {
-      "view_all": "View all",
-      "onboarding_title": "Your Blog Post Title Here",
-      "onboarding_content": "Give your customers a summary of your blog post"
+      "view_all": "Voir tout",
+      "onboarding_title": "Titre de votre article de blog",
+      "onboarding_content": "Donnez à vos clients un aperçu de votre article"
     },
     "featured_collection": {
-      "view_all": "View all",
-      "view_all_label": "View all products in the {{ collection_name }} collection"
+      "view_all": "Voir tout",
+      "view_all_label": "Voir tous les produits de la collection {{ collection_name }}"
     },
     "collection_list": {
       "view_all": "View all",
-      "items": "Items",
-      "default_title": "Collection title"
+      "items": "Articles",
+      "default_title": "Titre de la collection"
     },
     "collection_template": {
-      "apply": "Apply",
-      "clear": "Clear",
-      "clear_all": "Clear all",
-      "empty": "No products found",
-      "from": "From",
-      "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "clear_all": "Tout effacer",
+      "empty": "Aucun produit trouvé",
+      "from": "De",
+      "filter_and_sort": "Filtrer et trier",
+      "filter_by_label": "Filtrer :",
+      "filter_button": "Filtrer :",
       "filters_selected": {
-        "one": "{{ count }} selected",
+        "one": "{{ count }} sélection(s)",
         "other": "{{ count }} selected"
       },
-      "max_price": "The highest price is {{ price }}",
+      "max_price": "Le prix le plus élevé est {{ price }}",
       "product_count": {
-        "one": "{{ product_count }} of {{ count }} product",
-        "other": "{{ product_count }} of {{ count }} products"
+        "one": "{{ product_count }} sur {{ count }} produit(s)",
+        "other": "{{ count }} produit(s)"
       },
       "product_count_simple": {
         "one": "{{ count }} product",
         "other": "{{ count }} products"
       },
-      "reset": "Reset",
-      "sort_button": "Sort",
-      "sort_by_label": "Sort by:",
+      "reset": "Réinitialiser",
+      "sort_button": "Trier",
+      "sort_by_label": "Trier par :",
       "title": "Collection",
-      "to": "To",
-      "divider": "Price devider",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>"
+      "to": "À",
+      "divider": "Séparateur de prix",
+      "use_fewer_filters_html": "Utilisez moins de filtres ou tout effacer"
     },
     "video": {
-      "load_video": "Load video: {{ description }}"
+      "load_video": "Charger la vidéo"
     }
   },
   "localization": {
