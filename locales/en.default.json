@@ -10,21 +10,21 @@
 {
   "general": {
     "password_page": {
-      "login_form_heading": "",
-      "login_password_button": "",
-      "login_form_password_label": "",
-      "login_form_password_placeholder": "",
-      "login_form_error": "",
-      "login_form_submit": "",
-      "modal": "",
-      "admin_link_html": "",
-      "powered_by_shopify_html": ""
+      "login_form_heading": "Access the shop using a password:",
+      "login_password_button": "Enter with a password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_error": "Incorrect password!",
+      "login_form_submit": "To input",
+      "modal": "Modal password",
+      "admin_link_html": "Do you own this shop? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
+      "powered_by_shopify_html": "This store will be powered by {{ shopify }}"
     },
     "social": {
       "alt_text": {
-        "share_on_facebook": "",
-        "share_on_twitter": "",
-        "share_on_pinterest": ""
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Tweet on Twitter",
+        "share_on_pinterest": "Pin on Pinterest"
       },
       "links": {
         "twitter": "",
@@ -38,64 +38,65 @@
         "tiktok": ""
       }
     },
-    "continue_shopping": "",
-    "back_to_home_label": "",
+    "continue_shopping": "Continue shopping",
+    "back_to_home_label": "Home",
     "pagination": {
-      "label": "",
-      "page": "",
-      "next": "",
-      "previous": ""
+      "label": "Paging",
+      "page": "Page {{ number }}",
+      "next": "Next page",
+      "previous": "Previous page"
     },
     "search": {
-      "search": "",
-      "no_results_html": "",
-      "results_for_html": "",
-      "title": "",
-      "placeholder": "",
-      "submit": ""
+      "search": "Research",
+      "no_results_html": "Your search for \" {{ terms }} \" returned no results.",
+      "results_for_html": "Your search for \" {{ terms }} \" revealed the following:",
+      "title": "Search for products on our site",
+      "placeholder": "Find our store",
+      "submit": "Research"
     },
     "advance_search": {
-      "field_label_1": "",
-      "field_label_2": "",
-      "field_label_3": "",
-      "field_label_4": ""
+      "field_label_1": "Select 1",
+      "field_label_2": "Select 2",
+      "field_label_3": "Select 3",
+      "field_label_4": "Select 4"
     },
     "cart": {
-      "view": "",
-      "item_added": ""
+      "view": "Show my cart ( {{ count }} )",
+      "item_added": "Item added to cart"
     },
     "shipping_calculator": {
-      "button_title": "",
-      "popup_title": "",
-      "calculate_button": "",
-      "cancel_button": "",
-      "address_first_label": "",
-      "address_second_label": "",
-      "country_label": "",
-      "wrong_message": ""
+      "button_title": "Shipping",
+      "popup_title": "Estimate shipping costs",
+      "calculate_button": "Calculate",
+      "cancel_button": "Cancel",
+      "address_first_label": "We found",
+      "address_second_label": "Shipping rates for your address",
+      "country_label": "Please select a country",
+      "wrong_message": "Please provide accurate information."
     },
     "add_cart_note": {
       "button_title": "",
-      "popup_title": "",
-      "save_button": "",
-      "cancel_title": ""
+      "popup_title": "Add a note for the seller",
+      "save_button": "To safeguard",
+      "cancel_title": "Cancel"
     },
     "share": {
-      "close": "",
-      "copy_to_clipboard": "",
-      "share_url": "",
-      "success_message": "",
+      "close": "Close sharing",
+      "copy_to_clipboard": "Copy link",
+      "share_url": "Link",
+      "success_message": "Link copied to clipboard",
       "facebook": "",
-      "twitter": "",
-      "pinterest": "",
-      "facebook_follow": "",
-      "twitter_follow": "",
-      "pinterest_follow": ""
+      "twitter": "Twitter",
+      "pinterest": "Pin it",
+      "facebook_follow": "Follow us on Facebook",
+      "twitter_follow": "Follow us on Twitter",
+      "pinterest_follow": "Follow us on Pinterest",
+      "share": "Share"
     },
     "slider": {
-      "of": "",
-      "next_slide": "",
-      "previous_slide": ""
+      "of": "of",
+      "next_slide": "Swipe right",
+      "previous_slide": "Swipe left"
     }
   },
   "date_formats": {
@@ -103,8 +104,8 @@
   },
   "newsletter": {
     "label": "",
-    "success": "",
-    "button_label": ""
+    "success": "Thank you for registering",
+    "button_label": "Register"
   },
   "accessibility": {
     "skip_to_text": "Aller au contenu",
@@ -346,7 +347,8 @@
       }
     },
     "footer": {
-      "payment": "Paiement / Moyens de paiement"
+      "payment": "Paiement / Moyens de paiement",
+      "social_placeholder": "Follow us on social media!"
     },
     "featured_blog": {
       "view_all": "Voir tout",
@@ -526,6 +528,58 @@
       "expired": "Expirée",
       "copy_code_success": "Code copié avec succès",
       "print_gift_card": "Imprimer"
+    }
+  },
+  "customer_accounts": {
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "banner_due": {
+              "many": "Your payment is due in {{count}} days"
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "banner_title": {
+        "many": "There are {{count}} errors"
+      }
+    },
+    "ui_components": {
+      "autocompleteOptionsAvailable": {
+        "many": "{{count}} items available"
+      },
+      "month": {
+        "many": "month"
+      },
+      "mapClusterTitle": {
+        "many": "Cluster of {{number}} markers"
+      }
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "many": "{{count}} minutes ago"
+        }
+      }
+    },
+    "subscriptions": {
+      "subscription_contracts": {
+        "more_items": {
+          "many": "{{count}} additional products"
+        },
+        "product_count": {
+          "many": "{{count}} products"
+        }
+      },
+      "updating_contracts": {
+        "many": "Updating {{count}} subscription contracts..."
+      },
+      "contracts_updated": {
+        "many": "{{count}} subscription contracts successfully updated"
+      }
     }
   }
 }
