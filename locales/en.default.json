@@ -102,9 +102,9 @@
     "month_year": "%B %Y"
   },
   "newsletter": {
-    "label": "Enter your email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "label": "Entrez votre adresse e-mail",
+    "success": "Merci pour votre inscription",
+    "button_label": "S’abonner"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
