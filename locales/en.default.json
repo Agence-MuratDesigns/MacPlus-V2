@@ -107,24 +107,24 @@
     "button_label": "S’abonner"
   },
   "accessibility": {
-    "skip_to_text": "Skip to content",
-    "skip_to_product_info": "Skip to product information",
-    "skip_to_filter_info": "Skip to filter information",
-    "close": "Close",
-    "unit_price_separator": "per",
-    "vendor": "Vendor:",
-    "error": "Error",
-    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "skip_to_text": "Aller au contenu",
+    "skip_to_product_info": "Aller aux informations du produit",
+    "skip_to_filter_info": "Aller aux filtres",
+    "close": "Fermer",
+    "unit_price_separator": "par",
+    "vendor": "Vendeur :",
+    "error": "Erreur",
+    "refresh_page": "La sélection entraîne le rechargement complet de la page.",
     "link_messages": {
-      "new_window": "Opens in a new window.",
-      "external": "Opens external website."
+      "new_window": "S’ouvre dans une nouvelle fenêtre.",
+      "external": "Ouvre un site externe."
     },
-    "of": "of",
-    "next_slide": "Slide right",
-    "previous_slide": "Slide left",
-    "loading": "Loading...",
-    "total_reviews": "total reviews",
-    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars"
+    "of": "sur",
+    "next_slide": "Faire défiler vers la droite",
+    "previous_slide": "Faire défiler vers la gauche",
+    "loading": "Chargement…",
+    "total_reviews": "Nombre total d’avis",
+    "star_reviews_info": "{{ rating_value }} sur {{ rating_max }} étoiles"
   },
   "blogs": {
     "article": {
