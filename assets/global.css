@@ -3561,6 +3561,10 @@ team-member, .member-image {
     box-shadow: none;
     border-radius: 15px;
 }
+
+.localization-wrapper {
+  display:none;
+}
 .logo__list--bar .logo__list--image svg.placeholder-svg {
     position: absolute;
     top: -1px;
