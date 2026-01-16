@@ -155,113 +155,113 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Add to cart ",
-      "select_options": "Select options",
-      "quick_view_close": "Quick view close",
+      "add_to_cart": "Ajouter au panier",
+      "select_options": "Sélectionner les options",
+      "quick_view_close": "Fermer l’aperçu rapide",
       "description": "Description",
-      "on_sale": " SALE",
-      "new_badge": "NEW",
-      "product_variants": "Product variants",
+      "on_sale": "En promotion / PROMO",
+      "new_badge": "Nouveau / NOUVEAU",
+      "product_variants": "Variantes du produit",
       "media": {
-        "gallery_viewer": "Gallery Viewer",
-        "load_image": "Load image {{ index }} in gallery view",
-        "load_model": "Load 3D Model {{ index }} in gallery view",
-        "load_video": "Play video {{ index }} in gallery view",
-        "image_available": "Image {{ index }} is now available in gallery view",
-        "open_media": "Open media {{ index }} in modal",
-        "open_featured_media": "Open featured media in gallery view",
-        "play_model": "Play 3D Viewer",
-        "play_video": "Play video"
+        "gallery_viewer": "Visionneuse de galerie",
+        "load_image": "Charger l’image {{ index }} dans la galerie",
+        "load_model": "Charger le modèle 3D {{ index }} dans la galerie",
+        "load_video": "Lire la vidéo {{ index }} dans la galerie",
+        "image_available": "L’image {{ index }} est maintenant disponible dans la galerie",
+        "open_media": "Ouvrir le média {{ index }} dans une fenêtre",
+        "open_featured_media": "Ouvrir le média principal dans la galerie",
+        "play_model": "Lire le modèle 3D",
+        "play_video": "Lire la vidéo"
       },
       "quantity": {
-        "label": "Quantity",
-        "input_label": "Quantity for {{ product }}",
-        "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}"
+        "label": "Quantité",
+        "input_label": "Quantité pour {{ product }}",
+        "increase": "Augmenter la quantité pour {{ product }}",
+        "decrease": "Diminuer la quantité pour {{ product }}"
       },
       "countdown_timer": {
-        "days": "Days",
-        "hours": "Hrs",
-        "minutes": "Min",
-        "seconds": "Sec"
+        "days": "Jours",
+        "hours": "Heures",
+        "minutes": "Minutes",
+        "seconds": "Secondes"
       },
       "pickup_availability": {
-        "view_store_info": "View store information",
-        "check_other_stores": "Check availability at other stores",
-        "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
-        "unavailable": "Couldn't load pickup availability",
-        "refresh": "Refresh"
+        "view_store_info": "Voir les informations du magasin",
+        "check_other_stores": "Vérifier dans d’autres magasins",
+        "pick_up_available": "Retrait disponible",
+        "pick_up_available_at_html": "Retrait disponible à {{ location_name }}",
+        "pick_up_unavailable_at_html": "Retrait actuellement indisponible à {{ location_name }}",
+        "unavailable": "Indisponible",
+        "refresh": "Actualiser"
       },
       "back_in_stock_notify": {
-        "button": "Notify Me when this product is available",
-        "Popup_heading": "Notified by email when this product becomes available",
-        "email_placeholder": "Enter your email",
-        "submit": "Notify when available",
-        "Email_Body_First_Title": "Please notify me when",
-        "Email_Body_Last_Title": "becomes available"
+        "button": "Me prévenir quand ce produit sera disponible",
+        "Popup_heading": "Être notifié par e-mail lorsque ce produit sera disponible",
+        "email_placeholder": "Entrez votre e-mail",
+        "submit": "Me prévenir",
+        "Email_Body_First_Title": "Merci de me prévenir lorsque",
+        "Email_Body_Last_Title": "sera de nouveau disponible"
       },
       "price": {
-        "from_price_html": "From {{ price }}",
-        "regular_price": "Regular price",
-        "sale_price": "Sale price",
-        "unit_price": "Unit price"
+        "from_price_html": "À partir de {{ price }}",
+        "regular_price": "Prix normal",
+        "sale_price": "Prix promotionnel",
+        "unit_price": "Prix unitaire"
       },
-      "share": "Share this product",
-      "sold_out": "Sold out",
-      "unavailable": "Unavailable",
-      "preorder": "Preorder",
-      "out_of_stock": "Out of stock",
-      "vendor": "Vendor",
+      "share": "Partager",
+      "sold_out": "Épuisé",
+      "unavailable": "Indisponible",
+      "preorder": "Précommande",
+      "out_of_stock": "Rupture de stock",
+      "vendor": "Vendeur",
       "type": "Type",
-      "barcode": "Barcode",
+      "barcode": "Code-barres",
       "sku": "Sku",
       "inventory_status": {
-        "availability": "Only",
-        "in_stock": "items in stock!",
-        "out_of_stock": "Out of stock!"
+        "availability": "Plus que",
+        "in_stock": "en stock ! ",
+        "out_of_stock": "Rupture de stock !"
       },
-      "discount_label": "Save -",
-      "video_exit_message": "{{ title }} opens full screen video in same window.",
-      "view_full_details": "View full details",
-      "xr_button": "View in your space",
-      "xr_button_label": "View in your space, loads item in augmented reality window",
-      "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "discount_label": "Économisez -",
+      "video_exit_message": "{{ title }} ouvre une vidéo plein écran dans la même fenêtre.",
+      "view_full_details": "Voir tous les détails",
+      "xr_button": "Voir dans votre espace",
+      "xr_button_label": "Voir dans votre espace, charge l’article en réalité augmentée",
+      "include_taxes": "Taxes incluses.",
+      "shipping_policy_html": "Livraison calculée à la validation de la commande."
     },
     "modal": {
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "Apply",
-      "clear": "Clear",
-      "clear_all": "Remove all",
-      "from": "From",
-      "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "clear_all": "Tout supprimer",
+      "from": "De",
+      "filter_and_sort": "À",
+      "filter_by_label": "Filtrer ",
+      "filter_button": "Filtrer :",
       "filters_selected": {
-        "one": "{{ count }} selected",
-        "other": "{{ count }} selected"
+        "one": "{{ count }} sélection",
+        "other": "{{ count }} sélections"
       },
-      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
-      "show_more": "Show more",
-      "show_less": "Show less",
-      "max_price": "The highest price is {{ price }}",
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filtres sélectionnés)",
+      "show_more": "Afficher plus",
+      "show_less": "Afficher moins",
+      "max_price": "Le prix le plus élevé est {{ price }}",
       "product_count": {
-        "one": "{{ product_count }} of {{ count }} product",
-        "other": "{{ product_count }} of {{ count }} products"
+        "one": "{{ product_count }} sur {{ count }} produit",
+        "other": "{{ product_count }} sur {{ count }} produits"
       },
       "product_count_simple": {
-        "one": "{{ count }} product",
-        "other": "{{ count }} products"
+        "one": "{{ count }} produit",
+        "other": "{{ count }} produits"
       },
-      "reset": "Reset",
-      "sort_button": "Sort",
-      "sort_by_label": "Sort by:",
-      "to": "To",
-      "clear_filter": "Remove filter"
+      "reset": "Réinitialiser",
+      "sort_button": "Trier",
+      "sort_by_label": "Trier par : ",
+      "to": "De",
+      "clear_filter": "Supprimer le filtre"
     }
   },
   "templates": {
