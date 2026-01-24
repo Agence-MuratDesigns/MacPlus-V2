@@ -83,7 +83,7 @@
         "logo_width": 180,
         "logo_position": "middle_left",
         "menu": "main-menu",
-        "menu_position": "center",
+        "menu_position": "start",
         "header_sticky": true,
         "show_normal_btn": false,
         "askqustion": "Ask Questions?",
