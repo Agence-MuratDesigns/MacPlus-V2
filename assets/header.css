@@ -21,6 +21,10 @@
   margin-left: -20px;
 }
 
+.header__actions {
+  margin-left: -100px;
+}
+
 /* Header Main Menu */
 @media only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (max-width: 767px) {
