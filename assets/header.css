@@ -17,7 +17,7 @@
   opacity: 0;
 }
 
-.header__menu {
+.header__menu, .header__actions {
   margin-left: -20px;
 }
 
