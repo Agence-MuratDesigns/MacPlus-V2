@@ -25,7 +25,7 @@
         "information_txt_QrRQCm"
       ],
       "settings": {
-        "header_top_enable": true,
+        "header_top_enable": false,
         "color_scheme": "scheme-ef8ab2e6-6488-4a4c-a71b-339b3d2ad1c0",
         "show_separator_line": false,
         "show_social": false,
