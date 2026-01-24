@@ -8,6 +8,11 @@
 
 /* base */
 
+.header__menu_ul {
+  position: relative
+  margin-left: -20px;
+}
+
 .no-js:not(html) {
   display: none !important;
 }
