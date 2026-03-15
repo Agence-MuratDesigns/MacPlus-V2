@@ -40,234 +40,172 @@
   assign f_colors  = f_colors  | split: '|||' | compact
 -%}
 
-{%- comment -%} Ne rien rendre si aucun tag trouvé {%- endcomment -%}
 {%- assign all_tags_count = f_models.size | plus: f_years.size | plus: f_chips.size | plus: f_ram.size | plus: f_storage.size | plus: f_screens.size | plus: f_colors.size -%}
-{%- if all_tags_count == 0 -%}
-  {%- break -%}
-{%- endif -%}
+{%- if all_tags_count == 0 -%}{%- break -%}{%- endif -%}
 
 <div class="toolbar-filters" id="ToolbarFilters">
-
-  {%- comment -%} --- Macro : rendu d'un groupe de filtres --- {%- endcomment -%}
 
   {%- comment -%} MODÈLE {%- endcomment -%}
   {%- if f_models.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_models -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-models">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         Modèle{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_models -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
   {%- comment -%} ANNÉE {%- endcomment -%}
   {%- if f_years.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_years -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-years">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         Année{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_years -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
   {%- comment -%} PUCE {%- endcomment -%}
   {%- if f_chips.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_chips -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-chips">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         Puce{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_chips -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
   {%- comment -%} RAM {%- endcomment -%}
   {%- if f_ram.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_ram -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-ram">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         RAM{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_ram -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
   {%- comment -%} STOCKAGE {%- endcomment -%}
   {%- if f_storage.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_storage -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-storage">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         Stockage{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_storage -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
   {%- comment -%} ÉCRAN {%- endcomment -%}
   {%- if f_screens.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_screens -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-screens">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         Écran{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_screens -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
   {%- comment -%} COULEUR {%- endcomment -%}
   {%- if f_colors.size > 0 -%}
     {%- assign g_active = 0 -%}
     {%- for tag in f_colors -%}{%- if current_tags contains tag -%}{%- assign g_active = g_active | plus: 1 -%}{%- endif -%}{%- endfor -%}
-    <details class="tf-group" id="tf-colors">
-      <summary class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}">
+    <div class="tf-group">
+      <button type="button" class="tf-btn{% if g_active > 0 %} tf-btn--active{% endif %}" aria-expanded="false">
         Couleur{%- if g_active > 0 -%}<span class="tf-count">{{ g_active }}</span>{%- endif -%}
         <svg class="tf-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </summary>
+      </button>
       <ul class="tf-menu" role="listbox">
         {%- for tag in f_colors -%}
-          {%- assign is_active = false -%}
-          {%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
-          {%- if is_active -%}
-            {%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- else -%}
-            {%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
-              <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">
-                {%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}
-              </span>
-              {{ tag }}
-            </a>
-          </li>
+          {%- assign is_active = false -%}{%- if current_tags contains tag -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- if is_active -%}{%- assign tag_url = tag | link_to_remove_tag: tag | split: 'href="' | last | split: '"' | first -%}
+          {%- else -%}{%- assign tag_url = tag | link_to_add_tag: tag | split: 'href="' | last | split: '"' | first -%}{%- endif -%}
+          <li><a href="{{ tag_url }}" class="tf-option{% if is_active %} tf-option--active{% endif %}">
+            <span class="tf-checkbox{% if is_active %} tf-checkbox--checked{% endif %}" aria-hidden="true">{%- if is_active -%}<svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 4L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>{%- endif -%}</span>
+            {{ tag }}
+          </a></li>
         {%- endfor -%}
       </ul>
-    </details>
+    </div>
   {%- endif -%}
 
-  {%- comment -%} Effacer tous les filtres {%- endcomment -%}
   {%- if current_tags.size > 0 -%}
     <a href="{{ collection.url }}" class="tf-clear">
       <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -278,22 +216,38 @@
 </div>
 
 <script>
-  (function() {
-    // Ferme les dropdowns au clic extérieur
-    document.addEventListener('click', function(e) {
-      document.querySelectorAll('.tf-group[open]').forEach(function(el) {
-        if (!el.contains(e.target)) el.removeAttribute('open');
-      });
+(function() {
+  var container = document.getElementById('ToolbarFilters');
+  if (!container) return;
+
+  // Toggle dropdown au clic sur un bouton
+  container.addEventListener('click', function(e) {
+    var btn = e.target.closest('.tf-btn');
+    if (!btn) return;
+    var group = btn.closest('.tf-group');
+    var isOpen = group.classList.contains('tf-group--open');
+
+    // Ferme tous les dropdowns
+    container.querySelectorAll('.tf-group--open').forEach(function(g) {
+      g.classList.remove('tf-group--open');
+      g.querySelector('.tf-btn').setAttribute('aria-expanded', 'false');
     });
-    // Ferme les autres dropdowns quand on en ouvre un
-    document.querySelectorAll('.tf-group').forEach(function(group) {
-      group.addEventListener('toggle', function() {
-        if (this.open) {
-          document.querySelectorAll('.tf-group[open]').forEach(function(el) {
-            if (el !== group) el.removeAttribute('open');
-          });
-        }
+
+    // Ouvre celui cliqué (si il était fermé)
+    if (!isOpen) {
+      group.classList.add('tf-group--open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Ferme au clic en dehors
+  document.addEventListener('click', function(e) {
+    if (!container.contains(e.target)) {
+      container.querySelectorAll('.tf-group--open').forEach(function(g) {
+        g.classList.remove('tf-group--open');
+        g.querySelector('.tf-btn').setAttribute('aria-expanded', 'false');
       });
-    });
-  })();
+    }
+  });
+})();
 </script>

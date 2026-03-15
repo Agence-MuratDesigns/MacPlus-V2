@@ -353,17 +353,20 @@
   }
 
   /* ── Toolbar inline filters ──────────────────────────────── */
+  /* Important : pas de overflow sur ce conteneur, les menus en position:absolute
+     seraient clippés si overflow-x ou overflow-y sont définis */
+  .product__filter--toolbar {
+    overflow: visible !important;
+  }
   .toolbar-filters {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 6px;
     flex: 1;
     min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
     padding: 0 10px 0 8px;
   }
-  .toolbar-filters::-webkit-scrollbar { display: none; }
 
   .tf-group {
     position: relative;
@@ -416,10 +419,11 @@
     flex-shrink: 0;
     transition: transform 0.2s ease;
   }
-  .tf-group[open] .tf-caret { transform: rotate(180deg); }
-  .tf-group[open] > .tf-btn { border-color: rgba(var(--color-foreground), 0.4); }
+  .tf-group--open .tf-caret { transform: rotate(180deg); }
+  .tf-group--open > .tf-btn { border-color: rgba(var(--color-foreground), 0.4); }
 
   .tf-menu {
+    display: none;
     position: absolute;
     top: calc(100% + 6px);
     left: 0;
@@ -434,16 +438,9 @@
     padding: 6px;
     list-style: none;
     margin: 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(6px);
-    transition: opacity 0.2s, transform 0.2s, visibility 0s 0.2s;
   }
-  .tf-group[open] .tf-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition: opacity 0.2s, transform 0.2s;
+  .tf-group--open .tf-menu {
+    display: block;
   }
 
   .tf-option {
