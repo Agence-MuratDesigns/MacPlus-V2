@@ -351,6 +351,164 @@
   details.facets__disclosure-vertical {
       box-shadow: none;
   }
+
+  /* ── Toolbar inline filters ──────────────────────────────── */
+  .toolbar-filters {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 10px 0 8px;
+  }
+  .toolbar-filters::-webkit-scrollbar { display: none; }
+
+  .tf-group {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .tf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgba(var(--color-foreground), 0.8);
+    background: transparent;
+    border: 1px solid rgba(var(--color-foreground), 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    list-style: none;
+    user-select: none;
+    transition: border-color 0.2s, background 0.2s;
+    line-height: 1;
+  }
+  .tf-btn::-webkit-details-marker { display: none; }
+  .tf-btn:hover {
+    border-color: rgba(var(--color-foreground), 0.3);
+    background: rgba(var(--color-foreground), 0.04);
+  }
+  .tf-btn--active {
+    background: rgba(var(--color-foreground), 1);
+    color: rgb(var(--color-background));
+    border-color: rgba(var(--color-foreground), 1);
+  }
+  .tf-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .tf-caret {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .tf-group[open] .tf-caret { transform: rotate(180deg); }
+  .tf-group[open] > .tf-btn { border-color: rgba(var(--color-foreground), 0.4); }
+
+  .tf-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 170px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgb(var(--color-background));
+    border: 1px solid rgba(var(--color-foreground), 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    z-index: 300;
+    padding: 6px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0s 0.2s;
+  }
+  .tf-group[open] .tf-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .tf-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 10px;
+    font-size: 1.3rem;
+    color: rgba(var(--color-foreground), 0.8);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .tf-option:hover { background: rgba(var(--color-foreground), 0.05); }
+  .tf-option--active { font-weight: 600; color: rgb(var(--color-foreground)); }
+
+  .tf-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid rgba(var(--color-foreground), 0.25);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tf-checkbox--checked {
+    background: rgb(var(--color-foreground));
+    border-color: rgb(var(--color-foreground));
+  }
+  .tf-checkbox--checked svg { width: 10px; height: 10px; color: rgb(var(--color-background)); }
+
+  .tf-clear {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    font-size: 1.2rem;
+    color: rgba(var(--color-foreground), 0.55);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .tf-clear svg { width: 11px; height: 11px; }
+  .tf-clear:hover { color: rgb(var(--color-foreground)); }
+
+  .toolbar-sort-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .toolbar-separator {
+    width: 1px;
+    height: 22px;
+    background: rgba(var(--color-foreground), 0.12);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 991px) {
+    .toolbar-filters { display: none; }
+    .toolbar-separator { display: none; }
+  }
 </style>
 
 {%- liquid
@@ -382,7 +540,7 @@
     or section.settings.filter_type == 'horizontal'
     or section.settings.filter_type == 'vertical-right'
   -%}
-    {%- if section.settings.product_view_switcher or section.settings.enable_sorting -%}
+    {%- if section.settings.product_view_switcher or section.settings.enable_sorting or section.settings.enable_filtering -%}
       <div class="{{ section.settings.container_type }} small-hide mb-30">
         <div class="product__filter--toolbar d-flex align-items-center border--filter">
           {%- if section.settings.product_view_switcher -%}
@@ -422,8 +580,17 @@
             </div>
           {%- endif -%}
 
+          {%- comment -%} Filtres inline auto-détectés depuis les tags {%- endcomment -%}
+          {%- if section.settings.enable_filtering -%}
+            {%- render 'toolbar-filters' -%}
+          {%- endif -%}
+
+          {%- if section.settings.enable_filtering and section.settings.enable_sorting -%}
+            <span class="toolbar-separator"></span>
+          {%- endif -%}
+
           {%- if section.settings.enable_sorting -%}
-            <facet-filters-form class="facets-vertical-sort no-js-hidden flex-grow-1">
+            <facet-filters-form class="facets-vertical-sort no-js-hidden toolbar-sort-wrapper">
               <form class="facets-vertical-form" id="FacetSortForm">
                 <div class="facet-filters sorting caption">
                   <div class="facet-filters__field">
@@ -498,8 +665,11 @@
     {%- endif -%}
   {%- endif -%}
 
-  {%- comment -%} Inline filter bar for horizontal quick filtering {%- endcomment -%}
-  {%- if section.settings.enable_filtering and section.settings.show_inline_filters -%}
+  {%- comment -%}
+    Le filter bar séparé n'est affiché que pour le layout "drawer" (pas de toolbar).
+    Pour vertical/horizontal, les filtres sont intégrés dans le toolbar ci-dessus.
+  {%- endcomment -%}
+  {%- if section.settings.enable_filtering and section.settings.show_inline_filters and section.settings.filter_type == 'drawer' -%}
     <div class="{{ section.settings.container_type }}">
       {% render 'collection-filter-bar' %}
     </div>
