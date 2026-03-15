@@ -1,1 +1,400 @@
-{"sections":{"main":{"type":"main-product","blocks":{"9b934ba1-fe4e-46f6-b201-6680584b0fac":{"type":"sku","settings":{}},"rating_cbUqDr":{"type":"rating","settings":{}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"cd140005-5187-4edb-a871-d38e77099a6d":{"type":"inventory","settings":{"colors_accent_1":"#00d1ff","gradient_accent_1":""}},"f900597c-23f9-44fa-ac9b-986174a86857":{"type":"countdown","settings":{"countdown_label":"Hurry up! Sale ends in","icon_enable":true,"timer_background":"#121212","timer_foreground":"#ffffff"}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","show_color_swatch":true,"color_option_style":"image","choose_options_name":"Color","color_option_design":"round"}},"buy_buttons":{"type":"buy_buttons","settings":{"quantity__button":true,"add_to_cart__button":"primary","show_dynamic_checkout":true,"guarantee_safe_checkout":true,"safe_checkout_text":"Guaranteed safe checkout"}},"f7302d8a-c3b2-48a3-ab1e-68e65db1f80c":{"type":"description","settings":{"heading":"Product Description","icon":"star","productdesc":"fulldesc","truncatewords_count_handle":200}},"c8842c06-e135-4b13-b10b-b2c347861c89":{"type":"collapsible_tab","settings":{"heading":"Our Privacy policy","content":"<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>","page":"compare","icon":"question_mark"}},"popup_size_guide_qnNqG3":{"type":"popup_size_guide","disabled":true,"settings":{"size_guide":"Size Guide","content":"","sizeguidhandle":""}},"popup_text_hirBFk":{"type":"popup_text","disabled":true,"settings":{"popup_label":"Popup Text","content":"<p>lorem Loren<\/p>","shipping_page_handle":""}},"0a478e9c-d23b-4b8b-b309-62919d0eb667":{"type":"share","settings":{"share_label":"Share more","share_link":true,"facebook_share":true,"twitter_share":true,"pinterest_share":true}}},"block_order":["9b934ba1-fe4e-46f6-b201-6680584b0fac","rating_cbUqDr","title","price","cd140005-5187-4edb-a871-d38e77099a6d","f900597c-23f9-44fa-ac9b-986174a86857","variant_picker","buy_buttons","f7302d8a-c3b2-48a3-ab1e-68e65db1f80c","c8842c06-e135-4b13-b10b-b2c347861c89","popup_size_guide_qnNqG3","popup_text_hirBFk","0a478e9c-d23b-4b8b-b309-62919d0eb667"],"settings":{"color_scheme":"background-1","breadcrumb_enable":true,"gallery_layout":"thumbnail_slider","media_size":"medium","media_height":"large","mobile_thumbnails":"show","image_card_corner_radius":15,"hide_variants":false,"enable_sticky_info":true,"top_space_enable":false,"sticky_enable":true,"padding_top":70,"padding_bottom":95,"mobile_padding_top":0,"mobile_padding_bottom":0}},"1745289788ef9d2eb4":{"type":"apps","settings":{"include_margins":true}},"video_wggG33":{"type":"video","disabled":true,"settings":{"color_scheme":"","height":"adapt","image_overlay_opacity":0,"heading":"Pourquoi nous choisir ?","heading_size":"medium","desctext":"<p>Nous mettons au centre la qualité, l’exigence et la transparence. Chaque appareil vendu passe par une sélection rigoureuse et un contrôle attentif.<\/p>","button_text":"","button_icon":false,"link_target":"_blank","button_link":"https:\/\/www.youtube.com\/watch?v=QWXLUHRIUEk","enable_border":true,"video_url":"https:\/\/www.youtube.com\/watch?v=QWXLUHRIUEk","description":"","video_sound":false,"play_button_text":"","video_icon_position":"bottom--left","full_width":false,"service_block":true,"service1_title_text":"Expertise & Fiabilité","service1_desc_text":"Un savoir-faire technique reconnu, une maîtrise réelle des produits Apple et électroniques,et des appareils préparés avec soin pour garantir stabilité, performance et confiance.","service2_title_text":"Service Humain & Transparence","service2_desc_text":"Un accompagnement direct, des conseils clairs, un suivi sérieux.Vous achetez auprès d’un spécialiste engagé, avec une expérience simple et sécurisée du début à la fin.","padding_top":85,"padding_bottom":15,"mobile_padding_top":50,"mobile_padding_bottom":0}},"product-recommendations":{"type":"product-recommendations","settings":{"color_scheme":"background-1","heading":"Vous aimeriez aussi...","heading_size":"h1","text_align":"center","image_ratio":"adapt","show_secondary_image":false,"show_title":true,"show_price":true,"show_vendor":false,"show_product_rating":true,"show_badges":true,"badge_position":"top-left","show_cart_button":true,"cart_button_style":"style2","cart_button_positon":"bottom_center","show_countdown":false,"timer_color_scheme":"background-1","place_timer_on_image":false,"products_to_show":9,"products_show_on_xl":"4","products_show_on_sm":"2","slider_enable":true,"show_pagination":false,"show_navigation":false,"auto_rotate":true,"autoplay_time":3,"padding_top":0,"padding_bottom":20,"mobile_padding_top":0,"mobile_padding_bottom":0}},"faq_4YUEmD":{"type":"faq","blocks":{"accordion_6PMBgy":{"type":"accordion","settings":{"heading":"Do your mobile come with a warranty?","content":"<p>We recommend consulting a healthcare professional to determine which vitamins or supplements best fit your needs.Yes, we partner with trusted payment providers to offer easy financing and installment plans at checkout.<br\/><br\/><\/p>"}},"accordion_xJyYxm":{"type":"accordion","settings":{"heading":"Do you offer installment payment options?","content":"<p>We offer a hassle-free return policy. If you're not satisfied with your purchase, you can return it within 6 days for an exchange or refund.<\/p>"}},"accordion_nKn3py":{"type":"accordion","settings":{"heading":"What is your return policy?","content":"<p>Delivery times vary based on your location, but we typically ship within<strong>24–48<\/strong>hours. You'll receive tracking information as soon as your order is dispatched.<br\/><br\/><\/p>"}}},"block_order":["accordion_6PMBgy","accordion_xJyYxm","accordion_nKn3py"],"disabled":true,"settings":{"container_type":"container","caption":"FREQUENTLY ASKED QUESTIONS","heading":"You've Got Any Questions?","heading_size":"h1","enable_image":true,"height":"large","image_position":"right","show_have_qustion":true,"stl_h_q":"Still Have Questions?","sub_h_q_title":"Feel free to ask any questions you have!","btn__text":"here to help","h_t_h_button_link":"","full_width":false,"color_scheme":"","mobile_image_position":"top","padding_top":45,"padding_bottom":100,"mobile_padding_top":0,"mobile_padding_bottom":60}},"text_with_icons_UiGtfy":{"type":"text-with-icons","blocks":{"feature_jDUNTa":{"type":"feature","settings":{"icon_enable":true,"icon":"box","heading":"<p>FREE SHIPPING<\/p>","text":"On all orders over $99.00"}},"feature_Ap9Jyy":{"type":"feature","settings":{"icon_enable":true,"icon":"guarantee","heading":"<p>MONEY BACK<\/p>","text":"30 days money back guarantee"}},"feature_iWDyVt":{"type":"feature","settings":{"icon_enable":true,"icon":"support","heading":"<p>BEST SUPPORT<\/p>","text":"Team always ready for you"}}},"block_order":["feature_jDUNTa","feature_Ap9Jyy","feature_iWDyVt"],"disabled":true,"settings":{"column":"3","content_alignment":"center","icon_position":"top","color_scheme":"background-1","border_show":true,"border_color":"#e7e7e7","padding_top":0,"padding_bottom":80,"mobile_padding_top":60,"mobile_padding_bottom":60}},"recent-viewed-products":{"type":"recently_viewed_product","disabled":true,"settings":{"color_scheme":"background-1","heading":"Recently viewed product","heading_size":"h2","text_align":"center","products_show_on_xl":"4","products_show_on_sm":"2","show_pagination":false,"show_navigation":false,"auto_rotate":true,"autoplay_time":3}},"text_with_icons_g9E6EU":{"type":"text-with-icons","blocks":{"feature_Rk6pKc":{"type":"feature","settings":{"icon_enable":true,"icon":"dollar","heading":"<p>MONEY BACK<\/p>","text":"30 days money back guarantee"}},"feature_jELPjH":{"type":"feature","settings":{"icon_enable":true,"icon":"bag","heading":"<p>FREE SHIPPING<\/p>","text":"On all orders over $75.00"}},"feature_zteeby":{"type":"feature","settings":{"icon_enable":true,"icon":"sun","heading":"<p>BEST SUPPORT<\/p>","text":"Team always ready for you"}}},"block_order":["feature_Rk6pKc","feature_jELPjH","feature_zteeby"],"disabled":true,"settings":{"column":"3","content_alignment":"left","icon_position":"left","color_scheme":"","border_show":true,"border_color":"#e7e7e7","padding_top":45,"padding_bottom":80,"mobile_padding_top":0,"mobile_padding_bottom":40}}},"order":["main","1745289788ef9d2eb4","video_wggG33","product-recommendations","faq_4YUEmD","text_with_icons_UiGtfy","recent-viewed-products","text_with_icons_g9E6EU"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "9b934ba1-fe4e-46f6-b201-6680584b0fac": {
+          "type": "sku",
+          "settings": {}
+        },
+        "rating_cbUqDr": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "cd140005-5187-4edb-a871-d38e77099a6d": {
+          "type": "inventory",
+          "settings": {
+            "colors_accent_1": "#00d1ff",
+            "gradient_accent_1": ""
+          }
+        },
+        "f900597c-23f9-44fa-ac9b-986174a86857": {
+          "type": "countdown",
+          "settings": {
+            "countdown_label": "Dépêchez-vous ! La vente se termine dans",
+            "icon_enable": true,
+            "timer_background": "#121212",
+            "timer_foreground": "#ffffff"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_color_swatch": true,
+            "color_option_style": "image",
+            "choose_options_name": "Color",
+            "color_option_design": "round"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "quantity__button": true,
+            "add_to_cart__button": "primary",
+            "show_dynamic_checkout": true,
+            "guarantee_safe_checkout": true,
+            "safe_checkout_text": "Paiement sécurisé garanti"
+          }
+        },
+        "f7302d8a-c3b2-48a3-ab1e-68e65db1f80c": {
+          "type": "description",
+          "settings": {
+            "heading": "Description du produit",
+            "icon": "star",
+            "productdesc": "fulldesc",
+            "truncatewords_count_handle": 200
+          }
+        },
+        "c8842c06-e135-4b13-b10b-b2c347861c89": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Livraison & Retours",
+            "content": "<p>Les frais de livraison sont calculés en fonction du poids. Ajoutez simplement des produits à votre panier et utilisez le calculateur d'expédition pour estimer les frais de livraison.</p><p>Nous voulons que vous soyez 100 % satisfait de votre achat. Les articles peuvent être retournés ou échangés dans les 30 jours suivant la livraison.</p>",
+            "page": "compare",
+            "icon": "question_mark"
+          }
+        },
+        "popup_size_guide_qnNqG3": {
+          "type": "popup_size_guide",
+          "disabled": true,
+          "settings": {
+            "size_guide": "Size Guide",
+            "content": "",
+            "sizeguidhandle": ""
+          }
+        },
+        "popup_text_hirBFk": {
+          "type": "popup_text",
+          "disabled": true,
+          "settings": {
+            "popup_label": "Popup Text",
+            "content": "<p>lorem Loren</p>",
+            "shipping_page_handle": ""
+          }
+        },
+        "0a478e9c-d23b-4b8b-b309-62919d0eb667": {
+          "type": "share",
+          "settings": {
+            "share_label": "Partager",
+            "share_link": true,
+            "facebook_share": true,
+            "twitter_share": true,
+            "pinterest_share": true
+          }
+        }
+      },
+      "block_order": [
+        "9b934ba1-fe4e-46f6-b201-6680584b0fac",
+        "rating_cbUqDr",
+        "title",
+        "price",
+        "cd140005-5187-4edb-a871-d38e77099a6d",
+        "f900597c-23f9-44fa-ac9b-986174a86857",
+        "variant_picker",
+        "buy_buttons",
+        "f7302d8a-c3b2-48a3-ab1e-68e65db1f80c",
+        "c8842c06-e135-4b13-b10b-b2c347861c89",
+        "popup_size_guide_qnNqG3",
+        "popup_text_hirBFk",
+        "0a478e9c-d23b-4b8b-b309-62919d0eb667"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "breadcrumb_enable": true,
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "medium",
+        "media_height": "large",
+        "mobile_thumbnails": "show",
+        "image_card_corner_radius": 15,
+        "hide_variants": false,
+        "enable_sticky_info": true,
+        "top_space_enable": false,
+        "sticky_enable": true,
+        "padding_top": 70,
+        "padding_bottom": 95,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "1745289788ef9d2eb4": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "video_wggG33": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "height": "adapt",
+        "image_overlay_opacity": 0,
+        "heading": "Pourquoi nous choisir ?",
+        "heading_size": "medium",
+        "desctext": "<p>Nous mettons au centre la qualité, l’exigence et la transparence. Chaque appareil vendu passe par une sélection rigoureuse et un contrôle attentif.</p>",
+        "button_text": "",
+        "button_icon": false,
+        "link_target": "_blank",
+        "button_link": "https://www.youtube.com/watch?v=QWXLUHRIUEk",
+        "enable_border": true,
+        "video_url": "https://www.youtube.com/watch?v=QWXLUHRIUEk",
+        "description": "",
+        "video_sound": false,
+        "play_button_text": "",
+        "video_icon_position": "bottom--left",
+        "full_width": false,
+        "service_block": true,
+        "service1_title_text": "Expertise & Fiabilité",
+        "service1_desc_text": "Un savoir-faire technique reconnu, une maîtrise réelle des produits Apple et électroniques,et des appareils préparés avec soin pour garantir stabilité, performance et confiance.",
+        "service2_title_text": "Service Humain & Transparence",
+        "service2_desc_text": "Un accompagnement direct, des conseils clairs, un suivi sérieux.Vous achetez auprès d’un spécialiste engagé, avec une expérience simple et sécurisée du début à la fin.",
+        "padding_top": 85,
+        "padding_bottom": 15,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "color_scheme": "background-1",
+        "heading": "Vous aimeriez aussi...",
+        "heading_size": "h1",
+        "text_align": "center",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_title": true,
+        "show_price": true,
+        "show_vendor": false,
+        "show_product_rating": true,
+        "show_badges": true,
+        "badge_position": "top-left",
+        "show_cart_button": true,
+        "cart_button_style": "style2",
+        "cart_button_positon": "bottom_center",
+        "show_countdown": false,
+        "timer_color_scheme": "background-1",
+        "place_timer_on_image": false,
+        "products_to_show": 9,
+        "products_show_on_xl": "4",
+        "products_show_on_sm": "2",
+        "slider_enable": true,
+        "show_pagination": false,
+        "show_navigation": false,
+        "auto_rotate": true,
+        "autoplay_time": 3,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "faq_4YUEmD": {
+      "type": "faq",
+      "blocks": {
+        "accordion_6PMBgy": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Do your mobile come with a warranty?",
+            "content": "<p>We recommend consulting a healthcare professional to determine which vitamins or supplements best fit your needs.Yes, we partner with trusted payment providers to offer easy financing and installment plans at checkout.<br/><br/></p>"
+          }
+        },
+        "accordion_xJyYxm": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Do you offer installment payment options?",
+            "content": "<p>We offer a hassle-free return policy. If you're not satisfied with your purchase, you can return it within 6 days for an exchange or refund.</p>"
+          }
+        },
+        "accordion_nKn3py": {
+          "type": "accordion",
+          "settings": {
+            "heading": "What is your return policy?",
+            "content": "<p>Delivery times vary based on your location, but we typically ship within<strong>24–48</strong>hours. You'll receive tracking information as soon as your order is dispatched.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_6PMBgy",
+        "accordion_xJyYxm",
+        "accordion_nKn3py"
+      ],
+      "disabled": true,
+      "settings": {
+        "container_type": "container",
+        "caption": "FREQUENTLY ASKED QUESTIONS",
+        "heading": "You've Got Any Questions?",
+        "heading_size": "h1",
+        "enable_image": true,
+        "height": "large",
+        "image_position": "right",
+        "show_have_qustion": true,
+        "stl_h_q": "Still Have Questions?",
+        "sub_h_q_title": "Feel free to ask any questions you have!",
+        "btn__text": "here to help",
+        "h_t_h_button_link": "",
+        "full_width": false,
+        "color_scheme": "",
+        "mobile_image_position": "top",
+        "padding_top": 45,
+        "padding_bottom": 100,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 60
+      }
+    },
+    "text_with_icons_UiGtfy": {
+      "type": "text-with-icons",
+      "blocks": {
+        "feature_jDUNTa": {
+          "type": "feature",
+          "settings": {
+            "icon_enable": true,
+            "icon": "box",
+            "heading": "<p>FREE SHIPPING</p>",
+            "text": "On all orders over $99.00"
+          }
+        },
+        "feature_Ap9Jyy": {
+          "type": "feature",
+          "settings": {
+            "icon_enable": true,
+            "icon": "guarantee",
+            "heading": "<p>MONEY BACK</p>",
+            "text": "30 days money back guarantee"
+          }
+        },
+        "feature_iWDyVt": {
+          "type": "feature",
+          "settings": {
+            "icon_enable": true,
+            "icon": "support",
+            "heading": "<p>BEST SUPPORT</p>",
+            "text": "Team always ready for you"
+          }
+        }
+      },
+      "block_order": [
+        "feature_jDUNTa",
+        "feature_Ap9Jyy",
+        "feature_iWDyVt"
+      ],
+      "disabled": true,
+      "settings": {
+        "column": "3",
+        "content_alignment": "center",
+        "icon_position": "top",
+        "color_scheme": "background-1",
+        "border_show": true,
+        "border_color": "#e7e7e7",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 60
+      }
+    },
+    "recent-viewed-products": {
+      "type": "recently_viewed_product",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "heading": "Produits récemment consultés",
+        "heading_size": "h2",
+        "text_align": "center",
+        "products_show_on_xl": "4",
+        "products_show_on_sm": "2",
+        "show_pagination": false,
+        "show_navigation": false,
+        "auto_rotate": true,
+        "autoplay_time": 3
+      }
+    },
+    "text_with_icons_g9E6EU": {
+      "type": "text-with-icons",
+      "blocks": {
+        "feature_Rk6pKc": {
+          "type": "feature",
+          "settings": {
+            "icon_enable": true,
+            "icon": "dollar",
+            "heading": "<p>MONEY BACK</p>",
+            "text": "30 days money back guarantee"
+          }
+        },
+        "feature_jELPjH": {
+          "type": "feature",
+          "settings": {
+            "icon_enable": true,
+            "icon": "bag",
+            "heading": "<p>FREE SHIPPING</p>",
+            "text": "On all orders over $75.00"
+          }
+        },
+        "feature_zteeby": {
+          "type": "feature",
+          "settings": {
+            "icon_enable": true,
+            "icon": "sun",
+            "heading": "<p>BEST SUPPORT</p>",
+            "text": "Team always ready for you"
+          }
+        }
+      },
+      "block_order": [
+        "feature_Rk6pKc",
+        "feature_jELPjH",
+        "feature_zteeby"
+      ],
+      "disabled": true,
+      "settings": {
+        "column": "3",
+        "content_alignment": "left",
+        "icon_position": "left",
+        "color_scheme": "",
+        "border_show": true,
+        "border_color": "#e7e7e7",
+        "padding_top": 45,
+        "padding_bottom": 80,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1745289788ef9d2eb4",
+    "video_wggG33",
+    "product-recommendations",
+    "faq_4YUEmD",
+    "text_with_icons_UiGtfy",
+    "recent-viewed-products",
+    "text_with_icons_g9E6EU"
+  ]
+}
