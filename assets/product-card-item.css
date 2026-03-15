@@ -672,8 +672,17 @@ button.cart--icon-button.active {
     font-size: 1.5rem;
 }
 
-  
-  
+
+
+}
+
+/* Product card image: white bg + contain fit */
+.product-grid-item__thumbnail .media {
+  background-color: #ffffff;
+}
+.product-grid-item__thumbnail .media > img {
+  object-fit: contain;
+  object-position: center center;
 }
 
 
