@@ -540,7 +540,7 @@
     or section.settings.filter_type == 'horizontal'
     or section.settings.filter_type == 'vertical-right'
   -%}
-    {%- if section.settings.product_view_switcher or section.settings.enable_sorting or section.settings.enable_filtering -%}
+    {%- if section.settings.product_view_switcher or section.settings.enable_sorting or section.settings.enable_filtering or section.settings.enable_tag_filters -%}
       <div class="{{ section.settings.container_type }} small-hide mb-30">
         <div class="product__filter--toolbar d-flex align-items-center border--filter">
           {%- if section.settings.product_view_switcher -%}
@@ -580,13 +580,12 @@
             </div>
           {%- endif -%}
 
-          {%- comment -%} Filtres inline auto-détectés depuis les tags {%- endcomment -%}
-          {%- if section.settings.enable_filtering -%}
+          {%- comment -%} Filtres inline auto-détectés depuis les tags (indépendant de enable_filtering) {%- endcomment -%}
+          {%- if section.settings.enable_tag_filters -%}
             {%- render 'toolbar-filters' -%}
-          {%- endif -%}
-
-          {%- if section.settings.enable_filtering and section.settings.enable_sorting -%}
-            <span class="toolbar-separator"></span>
+            {%- if section.settings.enable_sorting -%}
+              <span class="toolbar-separator"></span>
+            {%- endif -%}
           {%- endif -%}
 
           {%- if section.settings.enable_sorting -%}
@@ -842,6 +841,13 @@
   	{
       "type": "header",
       "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_tag_filters",
+      "default": true,
+      "label": "Filtres par tags (auto-détectés)",
+      "info": "Affiche les filtres Modèle, Année, Puce, RAM, etc. directement dans la barre de tri, depuis les tags produits."
     },
     {
       "type": "checkbox",
