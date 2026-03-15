@@ -223,7 +223,14 @@
                   </h2>
                   <div class="footer__widget_inner">
                     <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
-                      {%- if block.settings.image != blank -%}
+                      {%- if block.settings.svg_logo_asset != blank -%}
+                        <img
+                          src="{{ block.settings.svg_logo_asset | asset_url }}"
+                          alt="{{ shop.name }}"
+                          loading="lazy"
+                          style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                        >
+                      {%- elsif block.settings.image != blank -%}
                         {%- assign image_size = block.settings.image_width | append: 'x' -%}
                         <img
                           srcset="{{ block.settings.image | image_url: width: image_size }}, {{ block.settings.image |  image_url: width: image_size, scale: 2 }} 2x"
@@ -585,6 +592,12 @@
          "id": "heading",
          "default": "Heading",
          "label": "t:sections.footer.blocks.text.settings.heading.label"
+       },
+       {
+         "type": "text",
+         "id": "svg_logo_asset",
+         "label": "SVG logo asset filename",
+         "info": "If set, uses this SVG from theme assets instead of the image picker"
        },
        {
          "type": "image_picker",

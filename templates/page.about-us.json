@@ -274,11 +274,11 @@
         "testimonial_GaTAqa": {
           "type": "testimonial",
           "settings": {
-            "heading": "<p>MacBook Pro 14\" M3 Pro – 18Go RAM / 512Go SSD</p>",
-            "text": "<p>\"Machine reçue en parfait état, exactement comme décrit. Emballage soigné, livraison rapide. Les performances sont au rendez-vous, je recommande vivement.\"</p>",
+            "heading": "<p>Nikon D6 Boîtier DSLR Caméra as new condition 1000 clics warranty 12 month</p>",
+            "text": "<p>“Good product photos and a good description. Communication was excellent. The shipping packaging was also sturdy. Shipped very quickly. Highly recommended.”</p>",
             "rating": "5",
             "author_image": false,
-            "author_name": "t***7",
+            "author_name": "m***3",
             "author_designation": "Achat vérifié",
             "verified__icon": true
           }
@@ -286,11 +286,11 @@
         "testimonial_Ah4RJy": {
           "type": "testimonial",
           "settings": {
-            "heading": "<p>Mac Mini 2024 M4 Pro – 24Go RAM / 512Go SSD</p>",
-            "text": "<p>\"Très satisfait de mon achat. La machine est silencieuse, rapide et en excellent état. Le vendeur a été réactif et professionnel. Je n'hésiterai pas à recommander.\"</p>",
+            "heading": "<p>Nikon D6 Boîtier DSLR Caméra as new condition 1000 clics warranty 12 month</p>",
+            "text": "<p>\"The item was well described and included good photos. It was well packaged and shipped quickly. Highly recommended.\"</p>",
             "rating": "5",
             "author_image": false,
-            "author_name": "p***k",
+            "author_name": "Karen Summers",
             "author_designation": "Achat vérifié",
             "verified__icon": true
           }
@@ -310,13 +310,13 @@
         "testimonial_bGbDLJ": {
           "type": "testimonial",
           "settings": {
-            "heading": "<p>Mac Studio 2024 M4 Max – 64Go RAM / 1To SSD</p>",
-            "text": "<p>\"Produit hors norme, qualité irréprochable. Le technicien a pris le temps de détailler les upgrades effectués. Exactement ce que je cherchais.\"</p>",
+            "heading": "<p>AS NEW Nikon D5 XQD VERSION 20.8MP DSLR Camera Body ShutterCount 200</p>",
+            "text": "<p>\"l'articolo è arrivato praticamente come se fosse nuovo per non parlare dell'imballo, perfetto. Non c'è niente da fare i giapponesi si distinguono come persone oneste educate e rispettose. Grazie\"</p>",
             "rating": "5",
             "author_image": false,
             "author_name": "0***-",
             "author_designation": "Achat vérifié",
-            "verified__icon": true
+            "verified__icon": false
           }
         }
       },

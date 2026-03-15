@@ -139,9 +139,9 @@
       ],
       "settings": {
         "color_scheme": "",
-        "heading": "Notre équipe",
+        "heading": "Meet Our Experts",
         "heading_size": "h1",
-        "subtitle": "L'ÉQUIPE MACPLUS",
+        "subtitle": "OUR TEAM",
         "alignment": "center",
         "image_ratio": "portrait",
         "layout": "standard",
@@ -163,15 +163,15 @@
         "heading_HYiDfm": {
           "type": "heading",
           "settings": {
-            "heading": "Vous souhaitez rejoindre l'aventure MacPlus ?",
+            "heading": "Are you ready to take the next step in your career and join a talented, dynamic team?",
             "heading_size": "h1"
           }
         },
         "button_mMMrwY": {
           "type": "button",
           "settings": {
-            "button_label": "Nous contacter",
-            "button_link": "shopify://pages/contact",
+            "button_label": "SENd us your resume ",
+            "button_link": "shopify://pages/contact-us",
             "button_style": "primary",
             "button_size": "medium"
           }

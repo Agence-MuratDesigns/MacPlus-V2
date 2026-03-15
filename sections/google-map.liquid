@@ -47,8 +47,8 @@
   }
 {%- endstyle -%}
 
-<div class="google__map--wrapper section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
-  <div class="{{ section.settings.container_type }}">
+<div class="google__map--wrapper section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient {% if section.settings.full_width_no_container %}google__map--fullwidth{% endif %}">
+  <div class="{% unless section.settings.full_width_no_container %}{{ section.settings.container_type }}{% endunless %}">
     {%- if section.settings.image != blank -%}
       <div
         class="google__map--media--{{ section.settings.image_height }} media"
@@ -119,6 +119,12 @@
         "id": "color_scheme",
         "label": "Color scheme",
         "default": "background-1"
+     },
+     {
+        "type": "checkbox",
+        "id": "full_width_no_container",
+        "label": "Full width (100vw, no container)",
+        "default": false
      },
      {
        "type": "image_picker",
