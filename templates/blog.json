@@ -103,8 +103,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "guarantee",
-            "heading": "<p>MONEY BACK</p>",
-            "text": "30 days money back guarantee"
+            "heading": "<p>REMBOURSEMENT</p>",
+            "text": "Garantie remboursement 30 jours"
           }
         },
         "feature_BntRg3": {
@@ -112,8 +112,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "users",
-            "heading": "<p>FREE SHIPPING</p>",
-            "text": "On all orders over $75.00"
+            "heading": "<p>LIVRAISON GRATUITE</p>",
+            "text": "Sur toutes les commandes de plus de 75 €"
           }
         },
         "feature_jtfmig": {
@@ -121,8 +121,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "support",
-            "heading": "<p>BEST SUPPORT</p>",
-            "text": "Team always ready for you"
+            "heading": "<p>SUPPORT DISPONIBLE</p>",
+            "text": "Notre équipe est toujours là pour vous"
           }
         }
       },

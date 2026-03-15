@@ -15,7 +15,7 @@
         "slide_rbL6hm": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mac-mini-ou-mac-studio-pos-sur-un-bureau-pur-clairage-froid-et-moderne-ambiance-technique-premium-arri-re-plan-l-g-rement-flout.png",
+            "image": "shopify://shop_images/mac-mini-ou-mac-studio-pos-sur-un-bureau-pur-clairage-froid-et-moderne-ambiance-technique-premium-arri-re-plan-l-g-rement-flout.png",
             "subheading": "Qualité supérieure",
             "sub_heading_text_color": "#d9dadc",
             "heading": "Puissance réinventée",
@@ -23,10 +23,10 @@
             "heading_position": "top",
             "description": "Découvrez des Macs optimisés pour des performances durables",
             "button_label": "Voir les produits",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_type": "primary",
             "button_label_2": "Qui sommes-nous",
-            "link_2": "shopify:\/\/pages\/a-propos",
+            "link_2": "shopify://pages/a-propos",
             "button_type_2": "secondary",
             "button_size": "medium",
             "show_text_box": false,
@@ -41,7 +41,7 @@
         "slide_FBeMkQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bo-tier-photo-professionnel-pos-sur-une-surface-sombre-lumi-re-dramatique-ambiance-studio-reflets-m-talliques-style-ultra-premium.png",
+            "image": "shopify://shop_images/bo-tier-photo-professionnel-pos-sur-une-surface-sombre-lumi-re-dramatique-ambiance-studio-reflets-m-talliques-style-ultra-premium.png",
             "subheading": "Matériel expert",
             "sub_heading_text_color": "#d9dadc",
             "heading": "Capturez chaque détail",
@@ -49,10 +49,10 @@
             "heading_position": "top",
             "description": "Exprimez votre vision grâce à un équipement précis et fiable",
             "button_label": "Voir les produits",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_type": "primary",
             "button_label_2": "Qui sommes-nous",
-            "link_2": "shopify:\/\/pages\/a-propos",
+            "link_2": "shopify://pages/a-propos",
             "button_type_2": "secondary",
             "button_size": "medium",
             "show_text_box": false,
@@ -171,7 +171,7 @@
         "text_kAYqq3": {
           "type": "text",
           "settings": {
-            "text": "<p>Macplus est né d’une conviction simple : mieux vaut proposer quelques machines d’exception que des centaines de références moyennes. Nous sélectionnons chaque Mac, chaque appareil photo, chaque objectif pour son potentiel. Nous le démontons, le rééquipons, le testons, jusqu’à ce qu’il atteigne un niveau de performance que vous ne trouverez ni en magasin, ni sur les sites de reconditionné classiques.<\/p>"
+            "text": "<p>Macplus est né d’une conviction simple : mieux vaut proposer quelques machines d’exception que des centaines de références moyennes. Nous sélectionnons chaque Mac, chaque appareil photo, chaque objectif pour son potentiel. Nous le démontons, le rééquipons, le testons, jusqu’à ce qu’il atteigne un niveau de performance que vous ne trouverez ni en magasin, ni sur les sites de reconditionné classiques.</p>"
           }
         }
       },
@@ -197,7 +197,7 @@
           "settings": {
             "icon_enable": false,
             "icon": "truck",
-            "heading": "<p><strong>Sélection stricte<\/strong><\/p>",
+            "heading": "<p><strong>Sélection stricte</strong></p>",
             "text": "Seuls les châssis et composants les plus fiables entrent dans notre atelier."
           }
         },
@@ -206,7 +206,7 @@
           "settings": {
             "icon_enable": false,
             "icon": "guarantee",
-            "heading": "<p><strong>Reconstruction maîtrisée<\/strong><\/p>",
+            "heading": "<p><strong>Reconstruction maîtrisée</strong></p>",
             "text": "Upgrades RAM, SSD, cartes, selon des standards techniques professionnels."
           }
         },
@@ -215,7 +215,7 @@
           "settings": {
             "icon_enable": false,
             "icon": "support",
-            "heading": "<p><strong>Tests réels<\/strong><\/p>",
+            "heading": "<p><strong>Tests réels</strong></p>",
             "text": "Chaque produit est testé en situation réelle avant d’être mis en ligne"
           }
         }
@@ -250,12 +250,11 @@
         "container_type": "container",
         "color_scheme": "",
         "product_list": [
-          "apple-macbook-pro-2024-16-1-to-ssd-48-go-ram-puce-m4-max-cpu-16-coeurs-gpu-40-coeurs-noir-sideral",
-          "apple-macbook-pro-2024-16-1-to-ssd-36-go-ram-puce-m4-max-cpu-14-coeurs-gpu-32-coeurs-argent",
-          "2024-macbook-pro-14-m4-10-core-cpu-16gb-512gb-ssd",
-          "apple-mac-mini-2024-2-to-ssd-48-go-ram-puce-m4-pro-cpu-14-coeurs-gpu-20-coeurs",
-          "apple-mac-studio-2024-1-to-64-go-ram-puce-m4-max-cpu-16-coeurs-gpu-40-coeurs",
-          "apple-mac-mini-2024-2-to-ssd-24-go-ram-puce-m4-cpu-10-coeurs-gpu-10-coeurs"
+          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme",
+          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-1",
+          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-2",
+          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-3",
+          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-4"
         ],
         "card_color_scheme": "",
         "image_ratio": "square",
@@ -414,7 +413,7 @@
         "text_rdnR9R": {
           "type": "text",
           "settings": {
-            "text": "<p>Nous travaillons depuis des années avec des plateformes comme Fnac et BackMarket. Mais acheter directement sur notre site vous offre des avantages supplémentaires, sans compromettre la sécurité ni la qualité.<\/p><ol><li>Prix optimisés, sans commissions intermédiaires<\/li><li>Un seul atelier, une seule méthode, un interlocuteur unique<\/li><li>Configurations détaillées, testées et documentées<\/li><li>Support direct avec le technicien qui prépare vos machines<\/li><\/ol>",
+            "text": "<p>Nous travaillons depuis des années avec des plateformes comme Fnac et BackMarket. Mais acheter directement sur notre site vous offre des avantages supplémentaires, sans compromettre la sécurité ni la qualité.</p><ol><li>Prix optimisés, sans commissions intermédiaires</li><li>Un seul atelier, une seule méthode, un interlocuteur unique</li><li>Configurations détaillées, testées et documentées</li><li>Support direct avec le technicien qui prépare vos machines</li></ol>",
             "nav_check_list": false
           }
         },
@@ -422,7 +421,7 @@
           "type": "button",
           "settings": {
             "button_label": "Voir nos produits",
-            "button_link": "shopify:\/\/collections\/all",
+            "button_link": "shopify://collections/all",
             "button_style": "primary",
             "button_size": "small"
           }
@@ -437,12 +436,12 @@
       "name": "Hero image with text",
       "settings": {
         "container_type": "container-fluid px-0",
-        "image": "shopify:\/\/shop_images\/imac-sur-un-bureau-design-fond-sombre-ambiance-studio-cr-atif-lumi-re-directionnelle-accessoires-photo-ou-vid-o-autour-pour-voquer-la-productivit-pro.png",
+        "image": "shopify://shop_images/imac-sur-un-bureau-design-fond-sombre-ambiance-studio-cr-atif-lumi-re-directionnelle-accessoires-photo-ou-vid-o-autour-pour-voquer-la-productivit-pro.png",
         "image_card_corner_radius": 0,
         "height": "medium",
         "desktop_image_width": "medium",
         "img_spin_active": false,
-        "spin_text": "✦ CRACKED SCREEN ✦ BATTERY ✦ Repairs",
+        "spin_text": "✦ ÉCRAN FISSURÉ ✦ BATTERIE ✦ Réparations",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
@@ -466,7 +465,7 @@
           "settings": {
             "icon_enable": true,
             "icon": "box",
-            "heading": "<p><strong>Livraison express<\/strong><\/p>",
+            "heading": "<p><strong>Livraison express</strong></p>",
             "text": "Envoi rapide et suivi sécurisé"
           }
         },
@@ -475,7 +474,7 @@
           "settings": {
             "icon_enable": true,
             "icon": "support",
-            "heading": "<p><strong>Support 24\/7<\/strong><\/p>",
+            "heading": "<p><strong>Support 24/7</strong></p>",
             "text": "Assistance réactive, experts disponibles"
           }
         },
@@ -484,7 +483,7 @@
           "settings": {
             "icon_enable": true,
             "icon": "check",
-            "heading": "<p>Garantie incluse<\/p>",
+            "heading": "<p>Garantie incluse</p>",
             "text": "Produits testés, certifiés et fiables"
           }
         }
@@ -520,4 +519,3 @@
     "text_with_icons_UiGtfy"
   ]
 }
-

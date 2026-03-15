@@ -223,22 +223,22 @@
         "accordion_6PMBgy": {
           "type": "accordion",
           "settings": {
-            "heading": "Do your mobile come with a warranty?",
-            "content": "<p>We recommend consulting a healthcare professional to determine which vitamins or supplements best fit your needs.Yes, we partner with trusted payment providers to offer easy financing and installment plans at checkout.<br/><br/></p>"
+            "heading": "Vos appareils sont-ils couverts par une garantie ?",
+            "content": "<p>Oui, tous nos appareils reconditionnés sont livrés avec une garantie. Contactez-nous pour connaître les détails selon le produit.<br/><br/></p>"
           }
         },
         "accordion_xJyYxm": {
           "type": "accordion",
           "settings": {
-            "heading": "Do you offer installment payment options?",
-            "content": "<p>We offer a hassle-free return policy. If you're not satisfied with your purchase, you can return it within 6 days for an exchange or refund.</p>"
+            "heading": "Proposez-vous des options de paiement en plusieurs fois ?",
+            "content": "<p>Nous proposons des solutions de paiement en plusieurs fois via nos partenaires de confiance. Les options disponibles s'affichent lors du paiement.</p>"
           }
         },
         "accordion_nKn3py": {
           "type": "accordion",
           "settings": {
-            "heading": "What is your return policy?",
-            "content": "<p>Delivery times vary based on your location, but we typically ship within<strong>24–48</strong>hours. You'll receive tracking information as soon as your order is dispatched.<br/><br/></p>"
+            "heading": "Quelle est votre politique de retour ?",
+            "content": "<p>Les délais de livraison varient selon votre localisation, mais nous expédions généralement sous <strong>24 à 48 h</strong>. Vous recevrez un lien de suivi dès l'expédition de votre commande.<br/><br/></p>"
           }
         }
       },
@@ -250,16 +250,16 @@
       "disabled": true,
       "settings": {
         "container_type": "container",
-        "caption": "FREQUENTLY ASKED QUESTIONS",
-        "heading": "You've Got Any Questions?",
+        "caption": "QUESTIONS FRÉQUENTES",
+        "heading": "Vous avez des questions ?",
         "heading_size": "h1",
         "enable_image": true,
         "height": "large",
         "image_position": "right",
         "show_have_qustion": true,
-        "stl_h_q": "Still Have Questions?",
-        "sub_h_q_title": "Feel free to ask any questions you have!",
-        "btn__text": "here to help",
+        "stl_h_q": "Encore des questions ?",
+        "sub_h_q_title": "N'hésitez pas à nous contacter !",
+        "btn__text": "Nous contacter",
         "h_t_h_button_link": "",
         "full_width": false,
         "color_scheme": "",
@@ -278,8 +278,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "box",
-            "heading": "<p>FREE SHIPPING</p>",
-            "text": "On all orders over $99.00"
+            "heading": "<p>LIVRAISON GRATUITE</p>",
+            "text": "Sur toutes les commandes de plus de 99 €"
           }
         },
         "feature_Ap9Jyy": {
@@ -287,8 +287,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "guarantee",
-            "heading": "<p>MONEY BACK</p>",
-            "text": "30 days money back guarantee"
+            "heading": "<p>REMBOURSEMENT</p>",
+            "text": "Garantie remboursement 30 jours"
           }
         },
         "feature_iWDyVt": {
@@ -296,8 +296,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "support",
-            "heading": "<p>BEST SUPPORT</p>",
-            "text": "Team always ready for you"
+            "heading": "<p>SUPPORT DISPONIBLE</p>",
+            "text": "Notre équipe est toujours là pour vous"
           }
         }
       },
@@ -344,8 +344,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "dollar",
-            "heading": "<p>MONEY BACK</p>",
-            "text": "30 days money back guarantee"
+            "heading": "<p>REMBOURSEMENT</p>",
+            "text": "Garantie remboursement 30 jours"
           }
         },
         "feature_jELPjH": {
@@ -353,8 +353,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "bag",
-            "heading": "<p>FREE SHIPPING</p>",
-            "text": "On all orders over $75.00"
+            "heading": "<p>LIVRAISON GRATUITE</p>",
+            "text": "Sur toutes les commandes de plus de 75 €"
           }
         },
         "feature_zteeby": {
@@ -362,8 +362,8 @@
           "settings": {
             "icon_enable": true,
             "icon": "sun",
-            "heading": "<p>BEST SUPPORT</p>",
-            "text": "Team always ready for you"
+            "heading": "<p>SUPPORT DISPONIBLE</p>",
+            "text": "Notre équipe est toujours là pour vous"
           }
         }
       },

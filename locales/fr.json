@@ -157,7 +157,7 @@
     "product": {
       "add_to_cart": "Ajouter au panier",
       "description": "Description",
-      "on_sale": "Vente",
+      "on_sale": "En promotion",
       "product_variants": "Variantes de produits",
       "quantity": {
         "label": "Quantité",
@@ -206,7 +206,7 @@
         "days": "Jours",
         "hours": "Heures",
         "minutes": "Min.",
-        "seconds": "Seconde"
+        "seconds": "Secondes"
       },
       "back_in_stock_notify": {
         "button": "Prévenez moi quand ce produit sera disponible",
@@ -218,15 +218,15 @@
       },
       "preorder": "Pré-commander",
       "out_of_stock": "En rupture de stock",
-      "type": "Taper",
-      "barcode": "code à barre",
+      "type": "Type",
+      "barcode": "Code-barres",
       "sku": "SKU",
       "inventory_status": {
         "availability": "Seulement",
         "in_stock": "articles en stock!",
         "out_of_stock": "En rupture de stock!"
       },
-      "discount_label": "Sauvegarder -",
+      "discount_label": "Économiser -",
       "include_taxes": "Taxe inclu.",
       "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">Frais de port</a> calculés à la caisse."
     },
@@ -235,7 +235,7 @@
     },
     "facets": {
       "apply": "Appliquer",
-      "clear": "Clair",
+      "clear": "Effacer",
       "clear_all": "Enlever tout",
       "from": "Depuis",
       "filter_and_sort": "Filtrer et trier",

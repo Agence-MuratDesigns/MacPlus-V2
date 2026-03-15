@@ -29,19 +29,19 @@
         "collection_item_YhM3MJ": {
           "type": "collection_item",
           "settings": {
-            "collection": "macbook"
+            "collection": "cellphone"
           }
         },
         "e3951533-bc33-4d84-8a0c-e5c455434077": {
           "type": "collection_item",
           "settings": {
-            "collection": "mac-mini"
+            "collection": "laptop-computer"
           }
         },
         "collection_item_gkbzni": {
           "type": "collection_item",
           "settings": {
-            "collection": "mac-studio"
+            "collection": "speaker-audio"
           }
         },
         "collection_item_txiQUb": {
@@ -53,25 +53,37 @@
         "collection_item_tV4qpt": {
           "type": "collection_item",
           "settings": {
-            "collection": "macs-pro"
+            "collection": "smartwatches"
           }
         },
         "collection_item_x839rf": {
           "type": "collection_item",
           "settings": {
-            "collection": "accessoires"
+            "collection": "accessories"
           }
         },
         "collection_item_dam7nA": {
           "type": "collection_item",
           "settings": {
-            "collection": "objectifs"
+            "collection": "headphones"
           }
         },
         "collection_item_XtwUzB": {
           "type": "collection_item",
           "settings": {
-            "collection": "imac"
+            "collection": "frontpage"
+          }
+        },
+        "collection_item_pkRXYY": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "cellphone"
+          }
+        },
+        "collection_item_7BfmeA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "headphones"
           }
         }
       },
@@ -83,7 +95,9 @@
         "collection_item_tV4qpt",
         "collection_item_x839rf",
         "collection_item_dam7nA",
-        "collection_item_XtwUzB"
+        "collection_item_XtwUzB",
+        "collection_item_pkRXYY",
+        "collection_item_7BfmeA"
       ],
       "settings": {
         "collection_type": "selected",
@@ -96,7 +110,7 @@
         "collection_show_content_below": true,
         "content_position_without_image_below": "center",
         "sort": "alphabetical",
-        "title": "Nos catégories",
+        "title": "Toutes les collections",
         "heading_tag": "h2",
         "page_description": ""
       }
@@ -106,10 +120,10 @@
       "settings": {
         "main_heading": "Accessoires",
         "heading_size": "h1",
-        "subtitle": "Pour votre Mac",
+        "subtitle": "Meilleur Choix",
         "alignment": "left",
         "mobile_alignment": "center",
-        "collection": "accessoires",
+        "collection": "accessories",
         "image_ratio": "adapt",
         "image_round_corner": true,
         "show_secondary_image": true,
@@ -141,7 +155,7 @@
         "nav_foreground": "#ffffff",
         "nav_background": "#00d1ff",
         "show_view_all": false,
-        "button_label": "View all",
+        "button_label": "Voir tout",
         "button_style": "primary",
         "button_size": "large",
         "padding_top": 0,
@@ -157,12 +171,12 @@
     "featured_collection_YfbXbY": {
       "type": "featured-collection",
       "settings": {
-        "main_heading": "Objectifs",
+        "main_heading": "Casques & Écouteurs",
         "heading_size": "h1",
-        "subtitle": "Photo & Vidéo Pro",
+        "subtitle": "Sélection pour vous",
         "alignment": "left",
         "mobile_alignment": "center",
-        "collection": "objectifs",
+        "collection": "headphones",
         "image_ratio": "adapt",
         "image_round_corner": true,
         "show_secondary_image": true,
@@ -194,7 +208,7 @@
         "nav_foreground": "#ffffff",
         "nav_background": "#00d1ff",
         "show_view_all": false,
-        "button_label": "View all",
+        "button_label": "Voir tout",
         "button_style": "primary",
         "button_size": "large",
         "padding_top": 85,
