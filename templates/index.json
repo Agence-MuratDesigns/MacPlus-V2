@@ -252,9 +252,10 @@
         "product_list": [
           "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme",
           "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-1",
-          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-2",
-          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-3",
-          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-4"
+          "macbook-pro-16-m4-max-16-core-cpu-40-core-gpu-48-go-ram-1-to-ssd-configuration-neuve-haut-de-gamme-4",
+          "mac-mini-avec-puce-m4-cpu-10-coeurs-gpu-10-coeurs-16-go-ram-256-go-ssd",
+          "mac-mini-avec-puce-m4-pro-cpu-12-coeurs-gpu-16-coeurs-24-go-ram-1-to-ssd",
+          "apple-mac-studio-2024-512-go-36-go-ram-puce-m4-max-cpu-14-coeurs-gpu-32-coeurs"
         ],
         "card_color_scheme": "",
         "image_ratio": "square",
