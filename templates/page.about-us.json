@@ -198,7 +198,7 @@
       ],
       "settings": {
         "container_type": "container",
-        "image": "shopify://shop_images/1_1_1_copie.jpg",
+        "image": "shopify://shop_images/macbook_air_sticker_application.webp",
         "image_card_corner_radius": 10,
         "height": "medium",
         "desktop_image_width": "medium",
@@ -245,9 +245,9 @@
       ],
       "settings": {
         "container_type": "container",
-        "image": "shopify://shop_images/1_1_1_copie.jpg",
+        "image": "shopify://shop_images/macbook_logic_board_repair.webp",
         "image_card_corner_radius": 10,
-        "height": "small",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
