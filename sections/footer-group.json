@@ -31,7 +31,7 @@
           "type": "contact_info",
           "settings": {
             "heading": "Informations de contact",
-            "contact_address": "<p><strong>Email : </strong>macplusfrance@icloud.com</p><p><strong>Téléphone : </strong>+33 (01) 80 91 20 00</p><p><strong>Adresse</strong> : 153 Rue Jean Jaurès, Villejuif, France</p>",
+            "contact_address": "<p><strong>Email : </strong>macplusfrance@icloud.com</p><p><strong>Téléphone : </strong>+33 (01) 1 80 91 20 00</p><p><strong>Adresse</strong> : 153 Rue Jean Jaurès, Villejuif, France</p>",
             "social_media": false
           }
         },
