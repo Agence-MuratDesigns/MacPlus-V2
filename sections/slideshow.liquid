@@ -263,7 +263,7 @@
                   class="slideshow__text-wrapper {% if block.settings.show_text_box == false %} slider_banner--desktop-transparent{% endif %} {% unless section.settings.show_content_below_image %} show_content--on-image {% endunless %} {{ content_class }} slider--alignment__desktop--{{ block.settings.alignment_desktop }} slider--alignment__mobile--{{ block.settings.alignment_mobile }}"
                 >
                   <div class="slideshow__text banner__box {{ block.settings.content_animation }} color-{{ block.settings.color_scheme }} gradient ">
-                    {%- capture 'subheading' -%}
+                    {%- capture subheading -%}
                       {%- if block.settings.subheading != blank -%}
                         <div class="banner__text subheading" style="--sub-heading-text: {{ block.settings.sub_heading_text_color }}">
                           <span>{{ block.settings.subheading }}</span>
@@ -271,7 +271,7 @@
                       {%- endif -%}
                     {%- endcapture -%}
 
-                    {%- capture 'heading' -%}
+                    {%- capture heading -%}
                        {%- if block.settings.heading != blank -%}
                         <h2 class="banner__heading {{ block.settings.heading_size }} mb-0">
                           {{ block.settings.heading }}
@@ -279,7 +279,7 @@
                        {%- endif -%}
                     {%- endcapture -%}
 
-                    {%- capture 'description' -%}
+                    {%- capture description -%}
                       {%- if block.settings.description != blank -%}
                         <div class="banner__text">
                           <span>{{ block.settings.description }}</span>
@@ -904,3 +904,19 @@
     ]
   }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- capture 'subheading' -%}"
+  to: "{%- capture subheading -%}"
+  position: 11578..11604
+- from: "{%- capture 'heading' -%}"
+  to: "{%- capture heading -%}"
+  position: 12005..12028
+- from: "{%- capture 'description' -%}"
+  to: "{%- capture description -%}"
+  position: 12369..12396
+{% endcomment %}

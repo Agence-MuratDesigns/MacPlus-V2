@@ -55,7 +55,7 @@
           {%- endif -%}
 
           {%- if section.settings.show_breadcrumb_navigation -%}
-            {%- render 'breadcrumb-nav', t: t' -%}
+            {%- render 'breadcrumb-nav', t: t -%}
           {%- endif -%}
         </div>
       </div>
@@ -180,3 +180,13 @@
  ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'breadcrumb-nav', t: t' -%}"
+  to: "{%- render 'breadcrumb-nav', t: t -%}"
+  position: 2218..2255
+{% endcomment %}
